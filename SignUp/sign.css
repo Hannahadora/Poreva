@@ -1,0 +1,30 @@
+:root{
+    --primary-color:#24279D;
+    --secondary-color:#FF7D69;
+    --dark-color:#9A9A9A;
+    --light-color:#EAECF3;
+    --normal-color:#333333;
+    --shadow-color:#00000029;
+}
+
+body{
+    margin: 0px;
+    padding:0px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+a{
+    color:var(--primary-color)
+}
+.dollar{
+    color:var(--primary-color)
+}
+.butt{
+    background-color: red;
+}
+button{
+    background-color: var(--secondary-color);
+}

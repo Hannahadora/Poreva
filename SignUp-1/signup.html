@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Sign Up</title>
+</head>
+<body class="m-0 p-0" style="font-family:sans-serif, Montserrat;">
+    <div class="header pt-12 flex items-center lg:justify-between" style="background-color: #24279D;">
+        <img class="logo lg:ml-24 ml-10" src="../images/Podreva-white-500px/Podreva-white-500px@2x.png">
+        <a class="click lg:mr-24 mr-10 lg:text-base text-xs" style="color:#ffffff !important;" href="#">How to podcast</a>
+    </div>
+
+    <h1 class="text-center lg:mt-16 lg:text-2xl text-x1 font-bold" style="font-family: playfair display;">Start your podcast today</h1>
+
+    <div class="lg:mx-48 mx-8 mt-14 mb-6 flex lg:flex-row flex-col items-center justify-between">
+        <form action="" class="lg:mr-12 lg:w-1/2 w-full">
+            <label class="text-base mb-2" for="lname">Name</label><br>
+            <input class="w-full lg:h-14 h-12 mb-5 border-2 rounded-lg" type="name" id="name" name="name"><br>
+            <label class="text-base mt-8 mb-2" for="e-mail">Email</label><br>
+            <input class="w-full lg:h-14 h-12 mb-5 border-2 rounded-lg" type="email" id="email" name="email"><br>
+            <label class="text-base mt-8 mb-2" for="lname">Card Name</label><br>
+            <input class="w-full lg:h-14 h-12 mb-5 border-2 rounded-lg" type="text" id="name" name="name">
+        </form>
+            
+        <form action="" class="lg:w-1/2 w-full">
+            <label class="text-base mb-2" for="lname">Set Password</label><br>
+            <input class="w-full lg:h-14 h-12 mb-5 border-2 rounded-lg" type="password" id="password" name="password"><br>
+            <label class="text-base mt-8 mb-2" for="e-mail">Confirm Password</label><br>
+            <input class="w-full lg:h-14 h-12 mb-5 border-2 rounded-lg" type="password" id="password" name="password"><br>
+            <label class="text-base mt-8 mb-2" for="lname">Card Number</label><br>
+            <input class="w-full bg-no-repeat bg-center lg:h-14 h-12 mb-5 border-2 rounded-lg" style="background-image: url(../SignUp-1/credit-card.svg);" type="text" id="number" name="number" placeholder="Card Number">
+        </form>
+    </div>
+
+    <form action="" class="lg:mx-48 mx-12">
+        <input class="w-5 h-5" type="checkbox" id="agree" name="agree" value="agree">
+        <label class="text-base" for="agree">I agree with <a class="no-underline" style="color:#24279D" href="#">privacy policies and terms</a></label>
+    </form>
+
+    <div class="text-center my-8">
+        <button class="text-base text-white px-14 py-4 rounded-3xl cursor-pointer focus:outline-none" style="background-color:#FF7D69;">Register</button>
+    </div>
+
+    <div class="text-center mb-24">
+        <p class="text-base">Already Have an Acconut?<a class="no-underline" style="color:#24279D" href="#">Log In</a></p>
+    </div>
+</body>
+</html>

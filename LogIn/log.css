@@ -1,0 +1,21 @@
+:root{
+    --primary-color:#24279D;
+    --secondary-color:#FF7D69;
+    --dark-color:#9A9A9A;
+    --light-color:#EAECF3;
+    --normal-color:#333333;
+}
+
+body{
+    margin: 0px;
+    padding:0px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+form,
+p{
+    color:var(--normal-color)
+}

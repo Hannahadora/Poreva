@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="fonts/css/all.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Dashboard</title>
+</head>
+<body class="m-0 p-0" style="font-family:montserrat; background-color: #ffffff; color:#4A4649">
+    <div class="header h-20 flex items-center justify-between" style="background-color: #24279D;">
+        <img class="logo ml-14 w-28 h-8" src="../images/Podreva-white-500px/Podreva-white-500px.png">
+       <nav class="navbar lg:visible invisible lg:w-4/5 w-full flex flex-row items-center justify-between">
+           <div class="lg:mx-0 mx-3">
+           <ul class="list-none flex flex-row items-center justify-between">
+               <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Home</a></li>
+               <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Add Show</a></li>
+               <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">My Shows</a></li>
+           </ul>
+           </div>
+           <div>
+            <ul class="list-none flex flex-row items-center lg:justify-between justify-center">
+                <li><a class="no-underline mr-5 lg:text-base text-sm text-white" href="#">Help</a></li>
+                <img class="lg:w-7 w-5 lg:h-7 h-5 mr-5" src="../images/20191012_155108/20191012_155108.png" alt="">
+                <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Mercy Johnson</a></li>
+                <img class="lg:mr-24 mr-3" src="../Episode/forward (2).svg">
+            </ul>
+            </div>
+       </nav>
+       <div class="dropdown lg:invisible visible">
+        <button class="mt-5 mr-24"><a class="mr-24" href="#"><img class="w-10" src="https://o.remove.bg/downloads/f28caa7d-f545-4f02-9ab7-b958a44c560e/image-removebg-preview.png" alt=""></a>
+        </button>
+            <ul class="dropdown-menu hidden">
+                <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Home</a></li>
+                <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Add Show</a></li>
+                <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">My Shows</a></li>
+            </ul>
+        </div> 
+    </div>
+    </div>
+
+    <div class="my-20 text-center">
+        <h1 class="text-2xl font-bold">Welcome to Podreva!</h1>
+        <p class="text-base mt-3">Add your first show - create a brand new one or import an existing podcast.</p>
+    </div>
+
+    <div class="flex lg:flex-row md:flex-row flex-col items-center justify-between my-20 mx-24">
+        <div class="lg:w-1/2 md:w-1/2 w-full h-auto lg:mr-8 md:mr-8 mr-0 shadow" style="background-color: #F5F5F5;">
+            <div class="mx-9 text-center">
+                <img class="mb-8 mx-auto mt-5" src="../Dashboard1/plus-circle.svg" alt="">
+                <p class="mb-3 text-lg font-bold">Create a New Podcast!</p>
+                <p class="mb-7 leading-7 text-base">Starting a new podcast? you'll be ready to go in a only a few short steps: enter show information upload artwork and add your first episode</p>
+                <button class="lg:text-lg md:text-base text-sm text-white mb-9 lg:px-9 md:px-9 px-5 lg:py-5 md:py-5 py-2 rounded-full cursor-pointer focus:outline-none shadow" style="background-color:#FF7D69;">Creating a new podcast</button>
+            </div>
+        </div>
+
+        <div class="lg:w-1/2 md:w-1/2 w-full h-auto lg:mt-0 md:mt-0 mt-12 shadow" style="background-color: #F5F5F5;">
+            <div class="mx-9 text-center">
+                <img class="mb-8 mx-auto mt-5" src="../Dashboard1/cloud-upload-alt.svg" alt="">
+                <p class="mb-3 text-lg font-bold">Import an Exiting Podcast</p>
+                <p class="mb-3 leading-7 text-base">Making the switch? Import your existing by searching Apple podcasts or by entering your RSS Feed. We'll email you when it's done!</p>
+                <div class="h-14 lg:w-1/2 md:w-1/2 w-10/12 mx-auto mb-7 mt-10 flex items-center justify-center border rounded-2xl">
+                    <input class="w-full h-12 text-sm py-5 px-7" style="background-color:#F5F5F5; color:#4A4649;" type="url" id="url" name="url" placeholder="Search Apple Podcast">
+                    <button class="w-16 h-12 px-4 py-3 cursor-pointer focus:outline-none" style="background-color: #f5f5f5;"><img src="../Dashboard1/search (1).svg" alt="search"></button>
+                </div>
+                <a class="xs pb-3" href="#" style="color: #24279D;">I'd rather enter my RSS Feed directly</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
