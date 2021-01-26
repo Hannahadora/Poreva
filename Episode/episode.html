@@ -7,39 +7,52 @@
     <title>Episode</title>
 </head>
 <body class="m-0 p-0" style="font-family:montserrat; background-color: #F3F3F3;">
-    <div class="header h-20 flex lg:flex-row flex-col items-center lg:justify-between justify-center" style="background-color: #24279D;">
+    <div class="header h-20 flex items-center justify-between" style="background-color: #24279D;">
         <img class="logo ml-14 w-28 h-8" src="../images/Podreva-white-500px/Podreva-white-500px.png">
-       <nav class="lg:w-4/5 w-full flex flex-row items-center justify-between">
+        <nav class="navbar lg:visible invisible lg:w-4/5 w-full flex flex-row items-center justify-between">
            <div class="lg:mx-0 mx-3">
            <ul class="list-none flex flex-row items-center justify-between">
-               <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Home</a></li>
+               <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Homepage1/pod.html">Home</a></li>
                <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Add Show</a></li>
                <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">My Shows</a></li>
            </ul>
            </div>
            <div>
             <ul class="list-none flex flex-row items-center lg:justify-between justify-center">
-                <li><a class="no-underline mr-5 lg:text-base text-sm text-white" href="#">Help</a></li>
+                <li><a class="no-underline mr-5 lg:text-base text-sm text-white" href="../Help/help.html">Help</a></li>
                 <img class="lg:w-7 w-5 lg:h-7 h-5 mr-5" src="../images/20191012_155108/20191012_155108.png" alt="">
                 <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Mercy Johnson</a></li>
                 <img class="lg:mr-24 mr-3" src="../Episode/forward (2).svg">
             </ul>
             </div>
        </nav>
+       <div class="dropdown absolute lg:invisible visible">
+        <button class="mt-5 mr-24"><a class="mr-24" href="#"><img class="w-10" src="https://o.remove.bg/downloads/f28caa7d-f545-4f02-9ab7-b958a44c560e/image-removebg-preview.png" alt=""></a>
+        </button>
+            <ul class="dropdown-menu hidden">
+                <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Homepage1/pod.html">Home</a></li>
+                <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Add Show</a></li>
+                <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">My Shows</a></li>
+            </ul>
+        </div> 
     </div>
+    </div>
+
 
     <div class="h-full flex lg:flex-row flex-col justify-between">
         <div class="sidebar lg:w-28 w-full bg-white">
             <div class="m-11 flex lg:flex-col flex-row items-center justify-between">
-                <img class="lg:mb-14 mb-0 w-6" src="../images/house.svg">
-                <img class="lg:mb-14 mb-0 w-6" src="../images/stream.svg">
-                <p class="text-xs lg:mb-14 mb-0"  style="color:#24279D;">Episodes</p>
-                <img class="lg:mb-14 mb-0 w-6" src="../social/chart-line (1).svg">
-                <img class="lg:mb-14 mb-0 w-6" src="../social/users (1).svg">
-                <img class="lg:mb-14 mb-0 w-6" src="../images/Group 11.svg">
-                <img class="lg:mb-14 mb-0 w-6" src="../images/windows.svg">
-                <img class="lg:mb-14 mb-0 w-6" src="../images/globe.svg">
-                <img class="lg:mb-14 mb-0 w-6" src="../images/Group 15.svg">
+                <a href="../Over view/overview.html"><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/house.svg"></a>
+                <div class="flex flex-col items-center">
+                   <a href="../Episode/episode.html"> <img class="lg:mb-5 mb-0 lg:w-7 w-auto" src="../images/stream.svg"></a>
+                    <p class="text-xs lg:mb-14 mb-0"  style="color:#24279D;">Episodes</p>
+                </div>
+                <a href=""><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../social/chart-line (1).svg"></a>
+                <a href="../Team/team.html"><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../social/users (1).svg"></a>
+                <a href="../social/social.html"><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/Group 11.svg"></a>
+                <a href=""><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/windows.svg"></a>
+                <a href=""><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/globe.svg"></a>
+                <a href=""><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/Group 15.svg"></a>
             </div>
         </div>
 
@@ -119,7 +132,7 @@
                 </div>
 
                 <div class="flex flex-col">
-                    <button class="text-lg text-white w-60 my-5 ml-5 px-9 py-5 rounded-full cursor-pointer focus:outline-none shadow" style="background-color:#FF7D69;">Add and Episode</button>
+                    <a href="../Edit/edit.html"><button class="text-lg text-white w-60 my-5 ml-5 px-9 py-5 rounded-full cursor-pointer focus:outline-none shadow" style="background-color:#FF7D69;">Add and Episode</button></a>
                     <button class="text-lg w-60 my-5 ml-5 px-1 py-5 rounded-full cursor-pointer focus:outline-none border" style="color: #9A9A9A; border-color: #707070;">Embed Latest Episode</button>
                     <button class="text-lg w-60 my-5 ml-5 px-1 py-5 rounded-full cursor-pointer focus:outline-none border" style="color: #9A9A9A; border-color: #707070;">Embed Playlist Player</button>
                 </div>

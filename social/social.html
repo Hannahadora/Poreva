@@ -7,42 +7,56 @@
     <title>Social</title>
 </head>
 <body class="m-0 p-0" style="font-family:sans-serif, Montserrat; background-color: #F3F3F3;">
-    <div class="header h-20 flex lg:flex-row flex-col items-center lg:justify-between justify-center" style="background-color: #24279D;">
+    <div class="header h-20 flex items-center justify-between" style="background-color: #24279D;">
         <img class="logo ml-14 w-28 h-8" src="../images/Podreva-white-500px/Podreva-white-500px.png">
-       <nav class="lg:w-4/5 w-full flex flex-row items-center justify-between">
+        <nav class="navbar lg:visible invisible lg:w-4/5 w-full flex flex-row items-center justify-between">
            <div class="lg:mx-0 mx-3">
            <ul class="list-none flex flex-row items-center justify-between">
-               <li><a class="no-underline lg:text-sm text-xs text-white mr-5" href="#">Home</a></li>
-               <li><a class="no-underline lg:text-sm text-xs text-white mr-5" href="#">Add Show</a></li>
-               <li><a class="no-underline lg:text-sm text-xs text-white mr-5" href="#">My Shows</a></li>
+               <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Homepage1/pod.html">Home</a></li>
+               <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Add Show</a></li>
+               <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">My Shows</a></li>
            </ul>
            </div>
            <div>
             <ul class="list-none flex flex-row items-center lg:justify-between justify-center">
-                <li><a class="no-underline mr-5 lg:text-sm text-xs text-white" href="#">Help</a></li>
+                <li><a class="no-underline mr-5 lg:text-base text-sm text-white" href="../Help/help.html">Help</a></li>
                 <img class="lg:w-7 w-5 lg:h-7 h-5 mr-5" src="../images/20191012_155108/20191012_155108.png" alt="">
-                <li><a class="no-underline lg:text-sm text-xs text-white mr-5" href="#">Mercy Johnson</a></li>
-                <img class="lg:mr-24 mr-3" src="../images/forward.svg">
+                <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Mercy Johnson</a></li>
+                <img class="lg:mr-24 mr-3" src="../Episode/forward (2).svg">
             </ul>
             </div>
        </nav>
+       <div class="dropdown absolute lg:invisible visible">
+        <button class="mt-5 mr-24"><a class="mr-24" href="#"><img class="w-10" src="https://o.remove.bg/downloads/f28caa7d-f545-4f02-9ab7-b958a44c560e/image-removebg-preview.png" alt=""></a>
+        </button>
+            <ul class="dropdown-menu hidden">
+                <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Homepage1/pod.html">Home</a></li>
+                <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Add Show</a></li>
+                <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">My Shows</a></li>
+            </ul>
+        </div> 
     </div>
+    </div>
+
+
     <div class="h-full flex lg:flex-row flex-col justify-between">
         <div class="sidebar lg:w-28 w-full bg-white">
             <div class="m-11 flex lg:flex-col flex-row items-center justify-between">
-                <img class="lg:mb-14 mb-0 w-5" src="../images/house.svg">
-                <img class="lg:mb-14 mb-0 w-5" src="../images/stream.svg">
-                <img class="lg:mb-14 mb-0 w-5" src="../social/chart-line (1).svg">
-                <img class="lg:mb-4 mb-0 w-5" src="../social/users (1).svg">
-                <p class="text-xs lg:mb-14 mb-0"  style="color:#24279D;">Social</p>
-                <img class="lg:mb-14 mb-0 w-5" src="../images/Group 11.svg">
-                <img class="lg:mb-14 mb-0 w-5" src="../images/windows.svg">
-                <img class="lg:mb-14 mb-0 w-5" src="../images/globe.svg">
-                <img class="lg:mb-14 mb-0 w-5" src="../images/Group 15.svg">
+                <a href="../Over view/overview.html"><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/house.svg"></a>
+                <a href="../Episode/episode.html"> <img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/stream.svg"></a>
+                <a href=""><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../social/chart-line (1).svg"></a>
+                <a href="../Team/team.html"><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../social/users (1).svg"></a>
+                <div class="flex flex-col items-center">
+                    <a href=""><img class="lg:mb-5 mb-0 lg:w-7 w-auto" src="../images/Group 11.svg"></a>
+                    <p class="text-xs lg:mb-14 mb-0"  style="color:#24279D;">Social</p>
+                </div>       
+                <a href=""><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/windows.svg"></a>
+                <a href=""><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/globe.svg"></a>
+                <a href=""><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/Group 15.svg"></a>
             </div>
         </div>
 
-        <div class="flex flex-col w-11/12 lg:mx-11 mx-7">
+        <div class="flex flex-col w-11/12 lg:mx-10 mx-5">
             <div class="flex lg:flex-row flex-col items-center mt-10">
                 <img class="lg:w-40 w-36 lg:h-36 h-full mr-6" src="../images/img/img.png">
                 <p class="font-bold text-2xl" style="font-family: playfair display;">Curiosity</p>
@@ -60,35 +74,35 @@
                             <img class="" src="../social/envelope.svg" alt="">
                             <p class="ml-2 text-sm">CONTACT EMAIL</p>
                         </div>
-                        <button class="rounded-full py-1 px-7 text-base text-white" style="background-color: #FF7D69;">Link</button>
+                        <button class="rounded-full py-1 px-7 text-base text-white cursor-pointer focus:outline-none" style="background-color: #FF7D69;">Link</button>
                     </div>
                     <div class="mx-7 my-9 flex justify-between items-center" style="font-family: montserrat;">
                         <div class="flex items-center">
                             <img class="" src="../social/twitter (1).svg" alt="">
                             <p class="ml-2 text-sm">TWITTER</p>
                         </div>
-                        <button class="rounded-full py-1 px-7 text-base text-white" style="background-color: #FF7D69;">Link</button>
+                        <button class="rounded-full py-1 px-7 text-base text-white cursor-pointer focus:outline-none" style="background-color: #FF7D69;">Link</button>
                     </div>
                     <div class="mx-7 my-9 flex justify-between items-center" style="font-family: montserrat;">
                         <div class="flex items-center">
                             <img class="" src="../social/instagram (1).svg" alt="">
                             <p class="ml-4 mr-64 text-sm">INSTAGRAM</p>
                         </div>
-                        <button class="rounded-full py-1 px-7 text-base text-white" style="background-color: #FF7D69;">Link</button>
+                        <button class="rounded-full py-1 px-7 text-base text-white cursor-pointer focus:outline-none" style="background-color: #FF7D69;">Link</button>
                     </div>
                     <div class="mx-7 my-9 flex justify-between items-center" style="font-family: montserrat;">
                         <div class="flex items-center">
                             <img class="" src="../social/facebook-f (1).svg" alt="">
                             <p class="ml-4 text-sm">FACEBOOK</p>
                         </div>
-                        <button class="rounded-full py-1 px-7 text-base text-white" style="background-color: #FF7D69;">Link</button>
+                        <button class="rounded-full py-1 px-7 text-base text-white cursor-pointer focus:outline-none" style="background-color: #FF7D69;">Link</button>
                     </div>
                     <div class="mx-7 my-9 flex justify-between items-center" style="font-family: montserrat;">
                         <div class="flex items-center">
                             <img class="" src="../social/youtube (1).svg" alt="">
                             <p class="ml-2 text-sm">YOUTUBE</p>
                         </div>
-                        <button class="rounded-full py-1 px-7 text-base text-white" style="background-color: #FF7D69;">Link</button>
+                        <button class="rounded-full py-1 px-7 text-base text-white cursor-pointer focus:outline-none" style="background-color: #FF7D69;">Link</button>
                     </div>    
                 </div>
                 
@@ -98,28 +112,28 @@
                             <img class="" src="../social/linkedin.svg" alt="">
                             <p class="ml-2 text-sm">LINKEDIN</p>
                         </div>
-                        <button class="rounded-full py-1 px-7 text-base text-white" style="background-color: #FF7D69;">Link</button>
+                        <button class="rounded-full py-1 px-7 text-base text-white cursor-pointer focus:outline-none" style="background-color: #FF7D69;">Link</button>
                     </div>
                     <div class="mx-7 my-9 flex justify-between items-center" style="font-family: montserrat;">
                         <div class="flex items-center">
                             <img class="" src="../social/medium.svg" alt="">
                             <p class="ml-2 text-sm">MEDIUM URL</p>
                         </div>
-                        <button class="rounded-full py-1 px-7 text-base text-white" style="background-color: #FF7D69;">Link</button>
+                        <button class="rounded-full py-1 px-7 text-base text-white cursor-pointer focus:outline-none" style="background-color: #FF7D69;">Link</button>
                     </div>
                     <div class="mx-7 my-9 flex justify-between items-center" style="font-family: montserrat;">
                         <div class="flex items-center">
                             <img class="" src="../social/patreon.svg" alt="">
                             <p class="ml-4 mr-64 text-sm">PATREON</p>
                         </div>
-                        <button class="rounded-full py-1 px-7 text-base text-white" style="background-color: #FF7D69;">Link</button>
+                        <button class="rounded-full py-1 px-7 text-base text-white cursor-pointer focus:outline-none" style="background-color: #FF7D69;">Link</button>
                     </div>
                     <div class="mx-7 my-9 flex justify-between items-center" style="font-family: montserrat;">
                         <div class="flex items-center">
                             <img class="" src="../social/google.svg" alt="">
                             <p class="ml-4 text-sm">GOOGLE ANALYTICS ID</p>
                         </div>
-                        <button class="rounded-full py-1 px-7 text-base text-white" style="background-color: #FF7D69;">Link</button>
+                        <button class="rounded-full py-1 px-7 text-base text-white cursor-pointer focus:outline-none" style="background-color: #FF7D69;">Link</button>
                     </div>
                 </div>
             </div>

@@ -7,39 +7,52 @@
     <title>Edit</title>
 </head>
 <body class="m-0 p-0" style="font-family:sans-serif, Montserrat; background-color: #F3F3F3;">
-    <div class="header h-20 flex lg:flex-row flex-col items-center lg:justify-between justify-center" style="background-color: #24279D;">
+    <div class="header h-20 flex items-center justify-between" style="background-color: #24279D;">
         <img class="logo ml-14 w-28 h-8" src="../images/Podreva-white-500px/Podreva-white-500px.png">
-       <nav class="lg:w-4/5 w-full flex flex-row items-center justify-between">
+        <nav class="navbar lg:visible invisible lg:w-4/5 w-full flex flex-row items-center justify-between">
            <div class="lg:mx-0 mx-3">
            <ul class="list-none flex flex-row items-center justify-between">
-               <li><a class="no-underline lg:text-sm text-xs text-white mr-5" href="#">Home</a></li>
-               <li><a class="no-underline lg:text-sm text-xs text-white mr-5" href="#">Add Show</a></li>
-               <li><a class="no-underline lg:text-sm text-xs text-white mr-5" href="#">My Shows</a></li>
+               <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Homepage1/pod.html">Home</a></li>
+               <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Add Show</a></li>
+               <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">My Shows</a></li>
            </ul>
            </div>
            <div>
             <ul class="list-none flex flex-row items-center lg:justify-between justify-center">
-                <li><a class="no-underline mr-5 lg:text-sm text-xs text-white" href="#">Help</a></li>
+                <li><a class="no-underline mr-5 lg:text-base text-sm text-white" href="../Help/help.html">Help</a></li>
                 <img class="lg:w-7 w-5 lg:h-7 h-5 mr-5" src="../images/20191012_155108/20191012_155108.png" alt="">
-                <li><a class="no-underline lg:text-sm text-xs text-white mr-5" href="#">Mercy Johnson</a></li>
-                <img class="lg:mr-24 mr-3" src="../images/forward.svg">
+                <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Mercy Johnson</a></li>
+                <img class="lg:mr-24 mr-3" src="../Episode/forward (2).svg">
             </ul>
             </div>
        </nav>
+       <div class="dropdown absolute lg:invisible visible">
+        <button class="mt-5 mr-24"><a class="mr-24" href="#"><img class="w-10" src="https://o.remove.bg/downloads/f28caa7d-f545-4f02-9ab7-b958a44c560e/image-removebg-preview.png" alt=""></a>
+        </button>
+            <ul class="dropdown-menu hidden">
+                <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Homepage1/pod.html">Home</a></li>
+                <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Add Show</a></li>
+                <li><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">My Shows</a></li>
+            </ul>
+        </div> 
     </div>
+    </div>
+
 
     <div class="h-full flex lg:flex-row flex-col justify-between">
         <div class="sidebar lg:w-28 w-full bg-white">
             <div class="m-11 flex lg:flex-col flex-row items-center justify-between">
-                <img class="lg:mb-14 mb-0 w-4" src="../images/house.svg">
-                <img class="lg:mb-14 mb-0 w-4" src="../images/stream.svg">
-                <p class="text-xs lg:mb-14 mb-0"  style="color:#24279D;">Episodes</p>
-                <img class="lg:mb-14 mb-0 w-4" src="../social/chart-line (1).svg">
-                <img class="lg:mb-14 mb-0 w-4" src="../social/users (1).svg">
-                <img class="lg:mb-14 mb-0 w-4" src="../images/Group 11.svg">
-                <img class="lg:mb-14 mb-0 w-4" src="../images/windows.svg">
-                <img class="lg:mb-14 mb-0 w-4" src="../images/globe.svg">
-                <img class="lg:mb-14 mb-0 w-4" src="../images/Group 15.svg">
+                <a href=""><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/house.svg"></a>
+                <div class="flex flex-col items-center">
+                   <a href=""> <img class="lg:mb-5 mb-0 lg:w-7 w-auto" src="../images/stream.svg"></a>
+                    <p class="text-xs lg:mb-14 mb-0"  style="color:#24279D;">Episodes</p>
+                </div>
+                <a href=""><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../social/chart-line (1).svg"></a>
+                <a href=""><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../social/users (1).svg"></a>
+                <a href=""><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/Group 11.svg"></a>
+                <a href=""><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/windows.svg"></a>
+                <a href=""><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/globe.svg"></a>
+                <a href=""><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/Group 15.svg"></a>
             </div>
         </div>
 
@@ -52,37 +65,40 @@
                 <div class="flex lg:flex-row flex-col justify-between">
                 <div class="mt-9 ml-6 lg:w-10/12 w-11/12 mr-14">
                     <form>
-                        <input class="w-full h-10 mb-2 text-xs py-5 px-7 border-2 rounded-lg" type="text" id="text" name="text" placeholder="Put a limit to your curiosity"><br>
-                        <label class="text-sm mt-5 mb-2" for="lname">PUBLISHING DATE</label><br>
-                        <input class="w-full h-10 mb-2 text-xs py-5 px-7 border-2 rounded-lg" type="date" id="date" name="date" placeholder="October 29, 2019 9:50 PM"><br>
+                        <input class="w-full h-14 mb-5 text-sm py-5 px-7 border-2 rounded-lg" type="text" id="text" name="text" placeholder="Put a limit to your curiosity"><br>
+                        <label class="text-base mb-2" for="lname">PUBLISHING DATE</label><br>
+                        <input class="w-full h-14 mb-2 text-sm py-5 px-7 border-2 rounded-lg" type="date" id="date" name="date" placeholder="October 29, 2019 9:50 PM"><br>
                     </form>
-                    <p class="text-xs mb-3">Forgot your password? <a class="no-underline"  style="color:#24279D;" href="#">Change Time Zone</a>
-                    <p class="text-sm">CURRENT AUDIO FILE</p>
-                    <div class="text-sm text-black px-14 py-3 mb-3 rounded-3xl w-80 h-12 flex items-center" style="background-color:#F3F3F3;">
-                        <img src="../images/forward.svg">
-                        <p>00/00</p>
-                        <div class="w-24 h-0 border-4 mx-7" style="border-color: #707070;"></div>
-                        <img src="../images/volume-up.svg">
-                </div>
-                <p  class="text-sm">REPLACE AUDIO FILE</p>
-                <button class="text-center text-base text-white mb-3 px-12 py-3 rounded-3xl cursor-pointer focus:outline-none flex items-center shadow" style="background-color:#FF7D69;"><img class="px-1" src="../images/cloud-upload-alt.svg"> Choose an audio file...</button>
-                <form>
-                    <label class="text-sm mt-5 mb-1" for="lname">EPISODE SUMMARY</label><br>
-                    <input class="w-full text-xs h-10 mb-3  py-5 px-7 border-2 rounded-lg" type="text" id="text" name="text" placeholder="This Episode is about limit to curiosity"><br>
-                </form>
-                <form class="flex">
-                    <div>
-                    <label class="text-sm mt-5 mb-1" for="lname">AUTHOR</label><br>
-                    <input class="lg:w-80 w-52 h-10 mb-3 mr-4 py-5 px-7 border-2 rounded-lg" type="text" id="text" name="text"><br>
+                    <p class="text-sm mb-5">Forgot your password? <a class="no-underline"  style="color:#24279D;" href="#">Change Time Zone</a>
+                    <p class="mb-2 text-base">CURRENT AUDIO FILE</p>
+                    <div class="flex items-center">
+                        <div class="flex items-center justify-center text-sm text-black px-14 py-3 mb-3 rounded-3xl w-80 h-20 flex items-center" style="background-color:#F3F3F3;">
+                            <img class="mr-2" src="../images/forward.svg">
+                            <p class="text-lg">00/00</p>
+                            <div class="w-24 h-1 border-4 mx-5 rounded-2xl" style="background: #707070; border-color: #707070;"></div>
+                            <img src="../images/volume-up.svg">
+                        </div>
+                        <p class="ml-5 text-base">4 minutes • 3.28 MB</p>
                     </div>
-                    <div>
-                    <label class="text-sm mt-5 mb-1" for="lname">KEYWORDS</label><br>
-                    <input class="lg:w-80 w-52 h-10 mb-3  py-5 px-7 border-2 rounded-lg" type="text" id="text" name="text"><br>
+                <p  class="text-base mt-7 mb-2">REPLACE AUDIO FILE</p>
+                <button class="h-14 text-center text-lg text-white px-12 py-3 rounded-3xl cursor-pointer focus:outline-none flex items-center shadow" style="background-color:#FF7D69;"><img class="px-1" src="../images/cloud-upload-alt.svg"> Choose an audio file...</button>
+                <form class="mt-7 ">
+                    <label class="text-base mb-2" for="lname">EPISODE SUMMARY</label><br>
+                    <input class="w-full text-sm h-14 mb-5 py-5 px-7 border-2 rounded-lg" type="text" id="text" name="text" placeholder="This Episode is about limit to curiosity"><br>
+                </form>
+                <form class="w-full mt-7 flex lg:flex-row flex-col items-center justify-between">
+                    <div class="w-1/2 mr-5">
+                    <label class="text-base mb-2" for="lname">AUTHOR</label><br>
+                    <input class="w-full h-14 mb-3 mr-4 py-5 px-7 border-2 rounded-lg" type="text" id="text" name="text"><br>
+                    </div>
+                    <div class="w-1/2">
+                    <label class="text-sm mb-2" for="lname">KEYWORDS</label><br>
+                    <input class="w-full h-14 mb-3  py-5 px-7 border-2 rounded-lg" type="text" id="text" name="text"><br>
                     </div>  
                 </form>
 
-                    <p class="text-sm">FULL SHOW NOTES</p>
-                    <div class="flex items-center mt-3">
+                    <p class="text-base mt-5">FULL SHOW NOTES</p>
+                    <div class="flex items-center mt-2">
                         <div class=" flex w-28 h-10 border rounded-2xl mr-8">
                             <img class="p-2 border-r" src="../images/bold.svg">
                             <img class="p-2 border-r" src="../images/italic.svg">
@@ -97,16 +113,16 @@
 
                     <textarea class="w-full h-40 mt-5 border-2 rounded-lg"></textarea>
 
-                    <div class="flex items-center justify-between my-4">
+                    <div class="flex items-center justify-between my-5">
                         <div class="w-1/5 text-sm">
                             <p class="text-sm">EPISODE TYPE</p>
-                            <form class="my-1">
-                                <input type="radio" id="full" name="episode" value="male">
-                                <label for="full">Full</label><br><br>
-                                <input type="radio" id="trailer" name="episode" value="female">
-                                <label for="trailer">Trailer</label><br><br>
-                                <input type="radio" id="bonus" name="episode" value="other">
-                                <label for="bonus">Bonus</label>
+                            <form class="my-5">
+                                <input type="radio" class="w-5 h-5" id="full" name="episode" value="full">
+                                <label class="text-base" for="full">Full</label><br><br>
+                                <input type="radio" class="w-5 h-5" id="trailer" name="episode" value="trailer">
+                                <label class="text-base" for="trailer">Trailer</label><br><br>
+                                <input type="radio" class="w-5 h-5" id="bonus" name="episode" value="bonus">
+                                <label class="text-base" for="bonus">Bonus</label>
                               </form>  
                         </div>
                         <div class="w-1/4 text-sm">
