@@ -4,29 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Home page</title>
 </head>
 <body class="m-0 p-0">
-    <div class="bg-no-repeat bg-cover bg-center h-screen" style="background-image: url(../images/Path8244/Path\ 8244@2x.png)">
+    <div class="bg-no-repeat bg-cover bg-center h-screen" style="background-image: url(../images/Path8244/Path\ 8244@2x.png)"data-aos="fade-left">
         <div class="header lg:px-36 px-24 py-10 flex items-center justify-between w-full">        
                     <img class="" src="../images/Podreva-white-500px/Podreva-white-500px@2x.png">
                     <nav class="">
                         <ul class="list-none flex items-center justify-between">
                             <li><a class="no-underline text-white mr-10 text-lg" href="#">How to podcast</a></li>
-                            <li><a class="no-underline text-white mr-10 text-lg" href="#">Log In</a></li>
-                            <li><a class="no-underline text-white px-10 text-lg py-3 border rounded-3xl" style="border-color: #FF7D69;" #">Sign Up</a></li>
+                            <li><a class="no-underline text-white mr-10 text-lg" href="../LogIn/Log.html">Log In</a></li>
+                            <li><a class="no-underline text-white px-10 text-lg py-3 border rounded-3xl" style="border-color: #FF7D69;" href="../SignUp-1/signup.html">Sign Up</a></li>
                         </ul>
                     </nav>
         </div>
         <!--<img class="relative -top-96 -left-32" src="../images/Ellipse 79.svg">-->
         <div class="lg:px-36 px-12 pt-20 pb-20 w-full flex items-center justify-between">
             <div class="lg:w-1/2 w-2/5 text-white">
-                <h1 class="lg:text-7xl text-5xl mb-7 leading-normal font-bold" style="font-family: playfair display;">We Bring Feelings Listening and Speaking</h1>
-                <p class="lg:text-3xl text-lg mb-12">Connect with many podcaster in world.</p>
+                <h1 class="lg:text-7xl text-5xl mb-7 leading-normal font-bold" style="font-family: playfair display;"data-aos="fade-right">We Bring Feelings Listening and Speaking</h1>
+                <p class="lg:text-3xl text-lg mb-12"data-aos="fade-right">Connect with many podcaster in world.</p>
                 <button class="px-12 py-3 rounded-3xl cursor-pointer focus:outline-none text-lg" style="background-color: #FF7D69;">Get Started</button>
             </div>
 
-            <div class="w-3/12 flex flex-col">
+            <div class="w-3/12 flex flex-col"data-aos="fade-left">
                 <img class="" src="../images/Group 8699/Group8699.png">
                 <div class="relative -top-48 -left-12 bg-white w-80 h-96">
                     <div class="my-5 mx-5 flex items-center">
@@ -153,7 +154,7 @@
             <nav class="lg:mr-80 mr:40">
                 <p class="text-lg text-white mb-10" style="font-family: montserrat;">Company</p>
                 <ul class="list-none flex flex-col">
-                    <li class="mb-3"><a class="no-underline mb-7 text-white text-base" style="font-family: montserrat;" href="#">Home</a></li>
+                    <li class="mb-3"><a class="no-underline mb-7 text-white text-base" style="font-family: montserrat;" href="../Homepage1/pod.html">Home</a></li>
                     <li class="mb-3"><a class="no-underline mb-7 text-white text-base" style="font-family: montserrat;" href="#">Blog</a></li>
                     <li class="mb-3"><a class="no-underline mb-7 text-white text-base" style="font-family: montserrat;" href="#">Privacy policy</a></li>
                 </ul>
@@ -162,7 +163,7 @@
             <nav class="lg:mr-36 mr-12">
                 <p class="text-lg text-white mb-10" style="font-family: montserrat;">Product</p>
                 <ul class="mr-36 list-none flex flex-col">
-                    <li class="mb-3"><a class="no-underline text-white text-base" style="font-family: montserrat;" href="#">Dashboard/Login</a></li>
+                    <li class="mb-3"><a class="no-underline text-white text-base" style="font-family: montserrat;" href="../LogIn/Log.html">Dashboard/Login</a></li>
                     <li class="mb-3"><a class="no-underline text-white text-base" style="font-family: montserrat;" href="#">Pricing</a></li>
                     <li class="mb-3"><a class="no-underline text-white text-base" style="font-family: montserrat;" href="#">Features</a></li>
                 </ul>
@@ -170,5 +171,12 @@
 
         </div>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 400,
+            duration: 2000
+        });
+      </script>
 </body>
 </html>
