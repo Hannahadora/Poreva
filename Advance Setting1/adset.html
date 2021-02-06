@@ -7,13 +7,31 @@
     <title>Advanced setiing</title>
 </head>
 <style>
-    input[type="radio"][title] {
-    width: 331px;
-    font-size: 13px;
-    background-color: #FF7D69;
-    padding: 37px 22px;
-}
-</style>
+    .tooltip {
+    position: relative;
+    display: inline-block;
+    }
+
+    .tooltip .tooltip-text {
+      visibility: hidden;
+      width: 320px;
+      background-color:#FF7D69;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 10px 12px;
+      cursor: pointer;
+
+       /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    }
+
+    
+    .tooltip:hover .tooltip-text {
+      visibility: visible;
+    }
+    </style>
 <body class="m-0 p-0" style="font-family:montserrat; background-color: #ffffff; color:#4A4649">
     <div class="overflow-hidden fixed top-0 z-10 w-full flex items-center justify-between" style="background-color: #24279D;">
         <img class="logo ml-14 my-6 w-28 h-8" src="../images/Podreva-white-500px/Podreva-white-500px.png">
@@ -48,7 +66,7 @@
     </div>
 
 
-    <div class="h-full py-20 relative top-20 flex lg:flex-row flex-col justify-between">
+    <div class="h-full py-20 relative lg:top-20 top-0 flex lg:flex-row flex-col justify-between">
         <div class="sidebar fixed lg:border-0 border lg:h-full h-auto lg:w-auto w-full z-10 bg-white">
             <div class="m-11 flex lg:flex-col flex-row items-center justify-between">
                     <a href="../Over view/overview.html"><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/house.svg"></a>
@@ -78,9 +96,13 @@
                         <p class="text-base ml-7 mt-6 mb-5">WHAT TYPE OF SHOW IS THIS? <span style="opacity: 0.4;">(Don't worry, you can change this later)</span></p>
                         <form class="ml-7 mt-5 mb-14">
                             <input type="radio" class="w-5 h-5 cursor-pointer" id="episode" name="show" value="episode">
-                            <label for="full" class="text-base" title="Specify episodic for stand-alone episodes or when you want your episodes presented and recommended last-to-first. This option also supports seasons, with the newest episode at the top.">Episodic</label><br><br>
+                            <label class="tooltip text-base" for="full">Episodic
+                                <span class="tooltip-text text-sm">Specify episodic for stand-alone episodes or when you want your episodes presented and recommended last-to-first. This option also supports seasons, with the newest episode at the top.</span>
+                            </label><br><br>
                             <input type="radio" class="w-5 h-5 cursor-pointer" id="serial" name="show" value="serial">
-                            <label for="trailer" class="text-base" title="Specify serial when you want your episodes presented and recommended first-to-last. This option supports narratives, storytelling, thematic, and multiple seasons">Serial</label><br><br>
+                            <label class="tooltip text-base" for="trailer">Serial
+                                <span class="tooltip-text text-sm">Specify serial when you want your episodes presented and recommended first-to-last. This option supports narratives, storytelling, thematic, and multiple seasons</span>
+                            </label><br>
                         </form>
                     </div>
                 </div>
@@ -98,7 +120,7 @@
             </div>
             
             <div class="mt-7 flex lg:flex-row flex-col justify-between">
-                <div class="lg:w-1/2 w-full bg-opacity-40 shadow lg:mr-12 mr-0" style="background-color: #f5f5f5;">
+                <div class="lg:w-1/2 w-full bg-opacity-40 shadow lg:mr-12 mr-0" style="background-color: #f5f5f5;;">
                     <form action="" class="mt-5 mb-12 mx-7" style="font-family: montserrat;">
                         <label class="px-2 mb-2 text-base" for="prycat">PRIMARY CATEGORY</label><br>
                         <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="Choose a primary category"><br>
@@ -128,14 +150,82 @@
                 </div>
             </div>
 
-            <a href="../Advance Setting1/adset.html">
+            <a href="../Advance setting/adsetting.html">
                 <p class="text-xl font-medium flex items-center mt-11" style="color: #24279D;">
                     <img class="mr-6" src="../Advance setting/forward (1).svg" alt="">
                     Advanced settings
                 </p>
             </a>
 
-           
+            <div class="my-10 pl-12 pt-14 pb-24 text-lg shadow" style="background-color: #F5F5F5;">
+                <p class="mb-5 font-medium">EPISODE/SEASON NUMBERING</p>
+                <form class="mb-b">
+                    <input class="w-4 h-4" type="checkbox">
+                    <label class="tooltip" for="">Turn on the ability to set the season number on episode ?
+                        <span class="tooltip-text text-base">Turn on if you wish to have more than one Season of episodes. Setting the Season on your episodes will affect how they're displayed and organized in Apple Podcasts and other players.</span>
+                    </label><br><br>
+                    <input class="w-4 h-4" type="checkbox">
+                    <label class="tooltip" for="">Disable Apple's episode number ?
+                        <span class="tooltip-text text-base">If you don't want to display episode numbers in Apple Podcast apps, or you already explicitly set the episode number in your episode titles.</span>
+                    </label><br>
+                </form>
+
+                <form action="">
+                    <label class="mt-8 mb-6 font-medium tooltip" for="url">EXTERNALLY-HOSTED RSS FEED ?
+                        <span class="tooltip-text text-base">If you'd like to take control of and generate your own RSS Feed that is not hosted on Podreva.fm, you may set it here. Proceed with caution!</span>
+                    </label><br>
+                    <input class="px-2 w-2/5 border rounded-xl h-12" type="url" placeholder="e.g. https://yourdomain.com/feed" style="background-color: #F5F5F5; border-color:#9A9A9A"><br>
+                    <label class="mt-6 mb-6 font-medium tooltip" for="url">PERMANENT REDIRECT (301) OF YOUR RSS FEED TO ANOTHER URL ?
+                        <span class="tooltip-text text-base">If you'd like to take control of and generate your own RSS Feed that is not hosted on Podreva.fm, you may set it here. Proceed with caution!</span>
+                    </label><br>
+                    <input class="px-2 w-2/5 border rounded-xl h-12" type="url" placeholder="e.g. https://newfeedurl.com/feed" style="background-color: #F5F5F5; border-color:#9A9A9A">
+                </form>
+
+                <form class="mt-12 mb-8" action="">
+                    <input class="w-4 h-4" type="checkbox">
+                    <label class="tooltip" for="">Make this shows's RSS Feed Private and Password - protected ?
+                        <span class="tooltip-text text-base">Helpful if you don't want the feed to be discoverable and only viewable by those give the private feed url to. The RSS Feed will not be auto-discoverable or iTunes compatible.</span>
+                    </label><br><br>
+                    <input class="w-4 h-4" type="checkbox">
+                    <label class="tooltip" for="">Disable this show's Rss Feed entirely ?
+                        <span class="tooltip-text text-base">Turn off your Transistor RSS Feed. Helpful if you don't want the feed to be discoverable or you generate and host your feed elsewhere.</span>
+                    </label><br><br>
+                    <input class="w-4 h-4" type="checkbox">
+                    <label class="tooltip" for="">Mark show as complete in iTunes ?
+                        <span class="tooltip-text text-base">Your show will be marked as completed and finished in iTunes.</span>
+                    </label><br><br>
+                    <input class="w-4 h-4" type="checkbox">
+                    <label class="tooltip" for="">Disable direct Mp3 download on embeds and your website ?
+                        <span class="tooltip-text text-base">Disable the ability for listeners to download episode MP3 audio files from embeddable players and Transistor websites.</span>
+                    </label><br><br>
+                    <input class="w-4 h-4" type="checkbox">
+                    <label class="tooltip" for="">Remove Poderva branding from embed audio players, website, and sharing pages ?
+                        <span class="tooltip-text text-base">Remove Poderva branding from embed audio players, website, and sharing pages</span>
+                    </label><br>
+                </form>
+
+                <p class="mb-5 font-medium">THIRD-PARTY ANALYTICS</p>
+                <form class="mb-5">
+                    <input class="w-4 h-4" type="checkbox">
+                    <label class="tooltip" for="">None - use only Podreva analytics
+                        <span class="tooltip-text text-base">Turn on if you wish to have more than one Season of episodes. Setting the Season on your episodes will affect how they're displayed and organized in Apple Podcasts and other players.</span>
+                    </label><br><br>
+                    <input class="w-4 h-4" type="checkbox">
+                    <label class="tooltip" for="">Enable Podtrac analytics Integrations ?
+                        <span class="tooltip-text text-base">Chartable is a third-party analytics platform. Enable this option if you want to use both Podreva and Chartable analytics.</span>
+                    </label><br><br>
+                    <input class="w-4 h-4" type="checkbox">
+                    <label class="tooltip" for="">Enable Podsights analytics Integrations ?
+                        <span class="tooltip-text text-base">Podtrac is a third-party analytics platform. Enable this option if you want to use both Podreva and Podtrac analytics.</span>
+                    </label><br><br>
+                    <input class="w-4 h-4" type="checkbox">
+                    <label class="tooltip" for="">Enable Podcorn analytics Integrations ?
+                        <span class="tooltip-text text-base">Podcorn is a third-party analytics platform. Enable this option if you want to use both Podreva and Podcorn analytics.</span>
+                    </label><br>
+                </form>
+
+
+           </div>
     </div>    
 </body>
 </html>
