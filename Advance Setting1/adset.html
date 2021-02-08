@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d2e0cde1e0.js" crossorigin="anonymous"></script>
     <title>Advanced setiing</title>
 </head>
 <style>
@@ -31,14 +32,28 @@
     .tooltip:hover .tooltip-text {
       visibility: visible;
     }
+
+    .dropdown-content {
+      background-color: #ffffff;
+      min-width: 300px;
+      height: auto;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 10;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: inline-block;
+    }
+
     </style>
+
 <body class="m-0 p-0" style="font-family:montserrat; background-color: #ffffff; color:#4A4649">
-    <div class="overflow-hidden fixed top-0 z-10 w-full flex items-center justify-between" style="background-color: #24279D;">
+    <div class="header fixed top-0 z-10 w-full flex items-center justify-between" style="background-color: #24279D;">
         <img class="logo ml-14 my-6 w-28 h-8" src="../images/Podreva-white-500px/Podreva-white-500px.png">
         <nav class="navbar lg:visible invisible lg:w-4/5 w-full flex flex-row items-center justify-between">
            <div class="lg:mx-0 mx-3">
            <ul class="list-none flex flex-row items-center justify-between">
-               <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Homepage1/pod.html">Home</a></li>
+               <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Homepage1/home.html">Home</a></li>
                <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Tool tip for serial/tool.html">Add Show</a></li>
                <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Show Home/show.html">My Shows</a></li>
            </ul>
@@ -46,42 +61,33 @@
            <div>
             <ul class="list-none flex flex-row items-center lg:justify-between justify-center">
                 <li class="inline-block"><a class="no-underline mr-5 lg:text-base text-sm text-white" href="../Help/help.html">Help</a></li>
-                <img class="lg:w-7 w-5 lg:h-7 h-5 mr-5" src="../images/20191012_155108/20191012_155108.png" alt="">
-                <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Mercy Johnson</a></li>
-                <img class="lg:mr-24 mr-3" src="../Episode/forward (2).svg">
+                
+                <div class="dropdown cursor-pointer mr-24">  
+                     <div class="py-6 inline-block relative flex items-center ">
+                        <img class="lg:w-7 w-5 lg:h-7 h-5 mr-5" src="../images/20191012_155108/20191012_155108.png" alt="">
+                        <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Mercy Johnson</a></li>
+                        <img class="lg:mr-24 mr-3" src="../Episode/forward (2).svg">
+                    </div>
+                    <div class="z-10 dropdown-content absolute hidden text-gray-700 py-5">
+                        <p class="font-semibold text-base p-2 hover:bg-gray-200">My Account</p>
+                        <a href="../LogIn/Log.html"><p class="text-base p-2 hover:bg-gray-200">Sign Out</p></a>
+                    </div>
+                </div>
             </ul>
             </div>
        </nav>
-       <div class="dropdown lg:hidden inline-block relative">
-        <button class="cursor-pointer focus:outline-none mr-24 mt-5"><img class="dropbtn w-10 h-10 border-4" src="https://o.remove.bg/downloads/f28caa7d-f545-4f02-9ab7-b958a44c560e/image-removebg-preview.png" alt=""></a>
-        <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
-            <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap no-underline lg:text-base text-sm" href="../Homepage1/pod.html">Home</a></li>
-            <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap no-underline lg:text-base text-sm" href="../Tool tip for serial/tool.html">Add Show</a></li>
-            <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap no-underline lg:text-base text-sm" href="../Show Home/show.html">My Shows</a></li>
-            <li class=""><a class="no-underline mr-5 lg:text-base text-sm text-white" href="../Help/help.html">Help</a></li>
-            <li class=""><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Mercy Johnson</a></li>
-        </ul>
+       
+       <div class="dropdown cursor-pointer lg:hidden inline-block relative mr-24">
+            <i class="text-white text-3xl my-6 fas fa-bars"></i>
+            <div class="z-10 dropdown-content absolute hidden text-gray-700 py-2">
+                <a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Homepage1/home.html">Home</a>
+                <a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Tool tip for serial/tool.html">Add Show</a>
+                <a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Show Home/show.html">My Shows</a>
+                <a class="no-underline hover:bg-gray-200 p-2 text-base" href="../Help/help.html">Help</a>
+                <a class="no-underline hover:bg-gray-200 p-2 text-base" href="#">Mercy Johnson</a>
+            </div>
         </div> 
     </div>
-    </div>
-
-
-    <div class="h-full py-20 relative lg:top-20 top-0 flex lg:flex-row flex-col justify-between">
-        <div class="sidebar fixed lg:border-0 border lg:h-full h-auto lg:w-auto w-full z-10 bg-white">
-            <div class="m-11 flex lg:flex-col flex-row items-center justify-between">
-                    <a href="../Over view/overview.html"><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/house.svg"></a>
-                    <a href="../Episode/episode.html"><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/stream.svg"></a>                        
-                    <a href="../Analytics/analytics.html"><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../social/chart-line (1).svg"></a>        
-                    <a href="../Team/team.html"><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../social/users (1).svg"></a>
-                    <a href="../social/social.html"><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/Group 11.svg"></a>
-                    <a href="../Integrations/integration.html"><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/windows.svg"></a>
-                    <a href=""><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/globe.svg"></a>
-                    <div class="flex flex-col items-center">
-                        <a href="../Advance setting/adsetting.html"><img class="lg:mb-5 mb-0 lg:w-7 w-auto" src="../images/Group 15.svg"></a>
-                        <p class="text-xs lg:mb-14 mb-0"  style="color:#24279D;">Show setting</p>
-                    </div>
-            </div>
-        </div>
 
 
         <div class="relative lg:left-32 left-0 lg:top-0 top-40 flex flex-col lg:w-10/12 w-full lg:mx-12">
@@ -123,41 +129,41 @@
                 <div class="lg:w-1/2 w-full bg-opacity-40 shadow lg:mr-12 mr-0" style="background-color: #f5f5f5;;">
                     <form action="" class="mt-5 mb-12 mx-7" style="font-family: montserrat;">
                         <label class="px-2 mb-2 text-base" for="prycat">PRIMARY CATEGORY</label><br>
-                        <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="Choose a primary category"><br>
+                        <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="Choose a primary category" style="background-color: #F5F5F5; border-color:#9A9A9A"><br>
                         <label class="px-2 mb-2 text-base" for="author">AUTHOR</label><br>
-                        <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="Name of show's creator(s)"><br>
+                        <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="Name of show's creator(s)" style="background-color: #F5F5F5; border-color:#9A9A9A"><br>
                         <label class="px-2 mb-2 text-base" for="keywords">KEYWORDS</label><br>
-                        <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="e.g. technology, apple, iPhone, macbook"><br>
+                        <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="e.g. technology, apple, iPhone, macbook" style="background-color: #F5F5F5; border-color:#9A9A9A"><br>
                         <label class="px-2 mb-2 text-base" for="language">LANGUAGE</label><br>
-                        <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="Choose a language"><br>
+                        <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="Choose a language" style="background-color: #F5F5F5; border-color:#9A9A9A"><br>
                         <label class="px-2 mb-2 text-base" for="name">SHOW OWNER</label><br>
-                        <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="Name of Show owner"><br>
+                        <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="Name of Show owner" style="background-color: #F5F5F5; border-color:#9A9A9A"><br>
                     </form>
                 </div>
                 <div class="lg:w-1/2 w-full bg-opacity-40 shadow" style="background-color: #f5f5f5;">
                     <form action="" class="mt-5 mb-12 mx-7" style="font-family: montserrat;">
                         <label class="px-2 mb-2 text-base" for="seccat">SECONDARY CATEDORY</label><br>
-                        <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="Choose a secondary category"><br>
+                        <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="Choose a secondary category" style="background-color: #F5F5F5; border-color:#9A9A9A"><br>
                         <label class="px-2 mb-2 text-base" for="copyright">COPYRIGHT</label><br>
-                        <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="e.g. @ 2019 Podcasting co."><br>
+                        <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="e.g. @ 2019 Podcasting co." style="background-color: #F5F5F5; border-color:#9A9A9A"><br>
                         <label class="px-2 mb-2 text-base" for="website">WEBSITE</label><br>
-                        <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="e.g.https://mypodcast.fm"><br>
+                        <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="e.g.https://mypodcast.fm" style="background-color: #F5F5F5; border-color:#9A9A9A"><br>
                         <label class="px-2 mb-2 text-base" for="zone">PUBLISHING TIME ZONE</label><br>
-                        <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="(GMT - 08:00) Pacific Time (US & Canada)"><br>
+                        <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="(GMT - 08:00) Pacific Time (US & Canada)" style="background-color: #F5F5F5; border-color:#9A9A9A"><br>
                         <label class="px-2 mb-2 text-base" for="email">OWNER EMAIL</label><br>
-                        <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="Email of show owner"><br>
+                        <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="Email of show owner" style="background-color: #F5F5F5; border-color:#9A9A9A"><br>
                     </form>
                 </div>
             </div>
 
-            <a href="../Advance setting/adsetting.html">
+            <a class="mx-24" href="../Advance setting/adsetting.html">
                 <p class="text-xl font-medium flex items-center mt-11" style="color: #24279D;">
                     <img class="mr-6" src="../Advance setting/forward (1).svg" alt="">
                     Advanced settings
                 </p>
             </a>
 
-            <div class="my-10 pl-12 pt-14 pb-24 text-lg shadow" style="background-color: #F5F5F5;">
+            <div class="my-10 lg:pl-12 pl-7 pt-14 pb-24 text-lg shadow" style="background-color: #F5F5F5;">
                 <p class="mb-5 font-medium">EPISODE/SEASON NUMBERING</p>
                 <form class="mb-b">
                     <input class="w-4 h-4" type="checkbox">
@@ -174,11 +180,11 @@
                     <label class="mt-8 mb-6 font-medium tooltip" for="url">EXTERNALLY-HOSTED RSS FEED ?
                         <span class="tooltip-text text-base">If you'd like to take control of and generate your own RSS Feed that is not hosted on Podreva.fm, you may set it here. Proceed with caution!</span>
                     </label><br>
-                    <input class="px-2 w-2/5 border rounded-xl h-12" type="url" placeholder="e.g. https://yourdomain.com/feed" style="background-color: #F5F5F5; border-color:#9A9A9A"><br>
+                    <input class="px-2 lg:w-2/5 w-10/12 border rounded-xl h-12" type="url" placeholder="e.g. https://yourdomain.com/feed" style="background-color: #F5F5F5; border-color:#9A9A9A"><br>
                     <label class="mt-6 mb-6 font-medium tooltip" for="url">PERMANENT REDIRECT (301) OF YOUR RSS FEED TO ANOTHER URL ?
                         <span class="tooltip-text text-base">If you'd like to take control of and generate your own RSS Feed that is not hosted on Podreva.fm, you may set it here. Proceed with caution!</span>
                     </label><br>
-                    <input class="px-2 w-2/5 border rounded-xl h-12" type="url" placeholder="e.g. https://newfeedurl.com/feed" style="background-color: #F5F5F5; border-color:#9A9A9A">
+                    <input class="px-2 lg:w-2/5 w-10/12 border rounded-xl h-12" type="url" placeholder="e.g. https://newfeedurl.com/feed" style="background-color: #F5F5F5; border-color:#9A9A9A">
                 </form>
 
                 <form class="mt-12 mb-8" action="">
@@ -186,18 +192,22 @@
                     <label class="tooltip" for="">Make this shows's RSS Feed Private and Password - protected ?
                         <span class="tooltip-text text-base">Helpful if you don't want the feed to be discoverable and only viewable by those give the private feed url to. The RSS Feed will not be auto-discoverable or iTunes compatible.</span>
                     </label><br><br>
+
                     <input class="w-4 h-4" type="checkbox">
                     <label class="tooltip" for="">Disable this show's Rss Feed entirely ?
                         <span class="tooltip-text text-base">Turn off your Transistor RSS Feed. Helpful if you don't want the feed to be discoverable or you generate and host your feed elsewhere.</span>
                     </label><br><br>
+
                     <input class="w-4 h-4" type="checkbox">
                     <label class="tooltip" for="">Mark show as complete in iTunes ?
                         <span class="tooltip-text text-base">Your show will be marked as completed and finished in iTunes.</span>
                     </label><br><br>
+
                     <input class="w-4 h-4" type="checkbox">
                     <label class="tooltip" for="">Disable direct Mp3 download on embeds and your website ?
                         <span class="tooltip-text text-base">Disable the ability for listeners to download episode MP3 audio files from embeddable players and Transistor websites.</span>
                     </label><br><br>
+
                     <input class="w-4 h-4" type="checkbox">
                     <label class="tooltip" for="">Remove Poderva branding from embed audio players, website, and sharing pages ?
                         <span class="tooltip-text text-base">Remove Poderva branding from embed audio players, website, and sharing pages</span>
@@ -223,6 +233,28 @@
                         <span class="tooltip-text text-base">Podcorn is a third-party analytics platform. Enable this option if you want to use both Podreva and Podcorn analytics.</span>
                     </label><br>
                 </form>
+
+                <form action="">
+                    <label class="mt-8 mb-6 font-medium tooltip" for="url">PLAYLIST EMBED EPISODE LIMIT ?
+                        <span class="tooltip-text text-base">If you'd like to take control of and generate your own RSS Feed that is not hosted on Podreva.fm, you may set it here. Proceed with caution!</span>
+                    </label><br>
+                    <div class="lg:w-1/4 w-8/12 h-14 flex items center rounded-xl border-2" style="background-color: #F5F5F5; border-color:#9A9A9A">
+                        <input class="px-2 w-1/2 border-r-2 h-12 rounded-l-xl focus:outline-none" type="number" style="background-color: #F5F5F5; border-color:#9A9A9A">
+                        <input class="px-2 w-1/2 text-sm h-12 rounded-xl focus:outline-none" type="text" placeholder="latest episode"  style="background-color: #F5F5F5; border-color:#9A9A9A">
+                    </div>
+
+                    <label class="mt-6 mb-6 font-medium tooltip" for="url">CHANGE YOUR RSS FEED URL ?
+                    <span class="tooltip-text text-base">If you'd like to take control of and generate your own RSS Feed that is not hosted on Podreva.fm, you may set it here. Proceed with caution!</span>
+                    </label><br>
+                    <div class="lg:w-2/5 w-10/12 h-14 flex items center rounded-xl border-2" style="background-color: #F5F5F5; border-color:#9A9A9A">
+                        <input class="px-2 w-1/2 border-r-2 h-12 rounded-l-xl focus:outline-none" type="url" placeholder="https://feeds.transistor.fm/" style="background-color: #F5F5F5; border-color:#9A9A9A">
+                        <input class="px-2 w-1/2 text-sm h-12 rounded-xl focus:outline-none" type="text" placeholder="Curiosity"  style="background-color: #F5F5F5; border-color:#9A9A9A">
+                    </div>
+                </form>
+
+                <div class="mb-24 mt-12">
+                    <button class="lg:text-lg text-sm text-white px-11 py-5 rounded-full cursor-pointer focus:outline-none shadow" style="background-color:#FF7D69;">Save Changes</button>
+                </div>
 
 
            </div>

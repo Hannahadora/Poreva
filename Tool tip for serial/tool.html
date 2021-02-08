@@ -4,23 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d2e0cde1e0.js" crossorigin="anonymous"></script>
     <title>Tool</title>
 </head>
 <style>
-    input[type="radio"][title] {
-    width: 331px;
-    font-size: 13px;
-    background-color: #FF7D69;
-    padding: 37px 22px;
-}
-</style>
+    .tooltip {
+    position: relative;
+    display: inline-block;
+    }
+
+    .tooltip .tooltip-text {
+      visibility: hidden;
+      width: 320px;
+      background-color:#FF7D69;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 10px 12px;
+      cursor: pointer;
+
+       /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    }
+
+    
+    .tooltip:hover .tooltip-text {
+      visibility: visible;
+    }
+
+    .dropdown-content {
+      background-color: #ffffff;
+      min-width: 300px;
+      height: auto;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 10;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: inline-block;
+    }
+    </style>
+
+
 <body class="m-0 p-0" style="font-family:montserrat; background-color: #ffffff; color:#4A4649">
-    <div class="overflow-hidden fixed top-0 z-10 w-full flex items-center justify-between" style="background-color: #24279D;">
+    <div class="header fixed top-0 z-10 w-full flex items-center justify-between" style="background-color: #24279D;">
         <img class="logo ml-14 my-6 w-28 h-8" src="../images/Podreva-white-500px/Podreva-white-500px.png">
         <nav class="navbar lg:visible invisible lg:w-4/5 w-full flex flex-row items-center justify-between">
            <div class="lg:mx-0 mx-3">
            <ul class="list-none flex flex-row items-center justify-between">
-               <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Homepage1/pod.html">Home</a></li>
+               <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Homepage1/home.html">Home</a></li>
                <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Tool tip for serial/tool.html">Add Show</a></li>
                <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Show Home/show.html">My Shows</a></li>
            </ul>
@@ -28,23 +61,32 @@
            <div>
             <ul class="list-none flex flex-row items-center lg:justify-between justify-center">
                 <li class="inline-block"><a class="no-underline mr-5 lg:text-base text-sm text-white" href="../Help/help.html">Help</a></li>
-                <img class="lg:w-7 w-5 lg:h-7 h-5 mr-5" src="../images/20191012_155108/20191012_155108.png" alt="">
-                <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Mercy Johnson</a></li>
-                <img class="lg:mr-24 mr-3" src="../Episode/forward (2).svg">
+                
+                <div class="dropdown cursor-pointer mr-24">  
+                     <div class="py-6 inline-block relative flex items-center ">
+                        <img class="lg:w-7 w-5 lg:h-7 h-5 mr-5" src="../images/20191012_155108/20191012_155108.png" alt="">
+                        <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Mercy Johnson</a></li>
+                        <img class="lg:mr-24 mr-3" src="../Episode/forward (2).svg">
+                    </div>
+                    <div class="z-10 dropdown-content absolute hidden text-gray-700 py-5">
+                        <p class="font-semibold text-base p-2 hover:bg-gray-200">My Account</p>
+                        <a href="../LogIn/Log.html"><p class="text-base p-2 hover:bg-gray-200">Sign Out</p></a>
+                    </div>
+                </div>
             </ul>
             </div>
        </nav>
-       <div class="dropdown lg:hidden inline-block relative">
-        <button class="cursor-pointer focus:outline-none mr-24 mt-5"><img class="dropbtn w-10 h-10 border-4" src="https://o.remove.bg/downloads/f28caa7d-f545-4f02-9ab7-b958a44c560e/image-removebg-preview.png" alt=""></a>
-        <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
-            <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap no-underline lg:text-base text-sm" href="../Homepage1/pod.html">Home</a></li>
-            <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap no-underline lg:text-base text-sm" href="../Tool tip for serial/tool.html">Add Show</a></li>
-            <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap no-underline lg:text-base text-sm" href="../Show Home/show.html">My Shows</a></li>
-            <li class=""><a class="no-underline mr-5 lg:text-base text-sm text-white" href="../Help/help.html">Help</a></li>
-            <li class=""><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Mercy Johnson</a></li>
-        </ul>
+       
+       <div class="dropdown cursor-pointer lg:hidden inline-block relative mr-24">
+            <i class="text-white text-3xl my-6 fas fa-bars"></i>
+            <div class="z-10 dropdown-content absolute hidden text-gray-700 py-2">
+                <a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Homepage1/home.html">Home</a>
+                <a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Tool tip for serial/tool.html">Add Show</a>
+                <a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Show Home/show.html">My Shows</a>
+                <a class="no-underline hover:bg-gray-200 p-2 text-base" href="../Help/help.html">Help</a>
+                <a class="no-underline hover:bg-gray-200 p-2 text-base" href="#">Mercy Johnson</a>
+            </div>
         </div> 
-    </div>
     </div>
 
     <div class="mt-32 mb-7 lg:mx-24 mx-12">
@@ -63,9 +105,13 @@
                 <p class="text-base ml-7 mt-6 mb-5">WHAT TYPE OF SHOW IS THIS? <span style="opacity: 0.4;">(Don't worry, you can change this later)</span></p>
                 <form class="ml-7 mt-5 mb-14">
                     <input type="radio" class="w-5 h-5 cursor-pointer" id="episode" name="show" value="episode">
-                    <label for="full" class="text-base" title="Specify episodic for stand-alone episodes or when you want your episodes presented and recommended last-to-first. This option also supports seasons, with the newest episode at the top.">Episodic</label><br><br>
+                    <label class="tooltip text-base" for="full">Episodic
+                        <span class="tooltip-text text-sm">Specify episodic for stand-alone episodes or when you want your episodes presented and recommended last-to-first. This option also supports seasons, with the newest episode at the top.</span>
+                    </label><br><br>
                     <input type="radio" class="w-5 h-5 cursor-pointer" id="serial" name="show" value="serial">
-                    <label for="trailer" class="text-base" title="Specify serial when you want your episodes presented and recommended first-to-last. This option supports narratives, storytelling, thematic, and multiple seasons">Serial</label><br><br>
+                    <label class="tooltip text-base" for="trailer">Serial
+                        <span class="tooltip-text text-sm">Specify serial when you want your episodes presented and recommended first-to-last. This option supports narratives, storytelling, thematic, and multiple seasons</span>
+                    </label><br>
                 </form>
             </div>
         </div>
@@ -87,29 +133,29 @@
         <div class="lg:w-1/2 w-full bg-opacity-40 shadow lg:mr-12 mr-0" style="background-color: #f5f5f5;">
             <form action="" class="mt-5 mb-12 mx-7" style="font-family: montserrat;">
                 <label class="px-2 mb-2 text-base" for="prycat">PRIMARY CATEGORY</label><br>
-                <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="Choose a primary category"><br>
+                <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="Choose a primary category" style="background-color: #F5F5F5; border-color:#9A9A9A"><br>
                 <label class="px-2 mb-2 text-base" for="author">AUTHOR</label><br>
-                <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="Name of show's creator(s)"><br>
+                <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="Name of show's creator(s)" style="background-color: #F5F5F5; border-color:#9A9A9A"><br>
                 <label class="px-2 mb-2 text-base" for="keywords">KEYWORDS</label><br>
-                <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="e.g. technology, apple, iPhone, macbook"><br>
+                <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="e.g. technology, apple, iPhone, macbook" style="background-color: #F5F5F5; border-color:#9A9A9A"><br>
                 <label class="px-2 mb-2 text-base" for="language">LANGUAGE</label><br>
-                <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="Choose a language"><br>
+                <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="Choose a language" style="background-color: #F5F5F5; border-color:#9A9A9A"><br>
                 <label class="px-2 mb-2 text-base" for="name">SHOW OWNER</label><br>
-                <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="Name of Show owner"><br>
+                <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="Name of Show owner" style="background-color: #F5F5F5; border-color:#9A9A9A"><br>
             </form>
         </div>
         <div class="lg:w-1/2 w-full bg-opacity-40 shadow" style="background-color: #f5f5f5;">
             <form action="" class="mt-5 mb-12 mx-7" style="font-family: montserrat;">
                 <label class="px-2 mb-2 text-base" for="seccat">SECONDARY CATEDORY</label><br>
-                <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="Choose a secondary category"><br>
+                <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="Choose a secondary category" style="background-color: #F5F5F5; border-color:#9A9A9A"><br>
                 <label class="px-2 mb-2 text-base" for="copyright">COPYRIGHT</label><br>
-                <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="e.g. @ 2019 Podcasting co."><br>
+                <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="e.g. @ 2019 Podcasting co." style="background-color: #F5F5F5; border-color:#9A9A9A"><br>
                 <label class="px-2 mb-2 text-base" for="website">WEBSITE</label><br>
-                <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="e.g.https://mypodcast.fm"><br>
+                <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="e.g.https://mypodcast.fm" style="background-color: #F5F5F5; border-color:#9A9A9A"><br>
                 <label class="px-2 mb-2 text-base" for="zone">PUBLISHING TIME ZONE</label><br>
-                <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="(GMT - 08:00) Pacific Time (US & Canada)"><br>
+                <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="(GMT - 08:00) Pacific Time (US & Canada)" style="background-color: #F5F5F5; border-color:#9A9A9A"><br>
                 <label class="px-2 mb-2 text-base" for="email">OWNER EMAIL</label><br>
-                <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="Email of show owner"><br>
+                <input class="w-full text-base h-14 mb-5  py-5 px-4 placeholder-opacity-50 border-2 rounded-lg" type="url" id="url" name="url" placeholder="Email of show owner" style="background-color: #F5F5F5; border-color:#9A9A9A"><br>
             </form>
         </div>
     </div>

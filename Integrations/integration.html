@@ -4,15 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d2e0cde1e0.js" crossorigin="anonymous"></script>
     <title>Integrations</title>
 </head>
+
+<style>
+    .dropdown-content {
+      background-color: #ffffff;
+      min-width: 300px;
+      height: auto;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 10;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: inline-block;
+    }
+    </style>
+
 <body class="m-0 p-0" style="font-family:montserrat; color:#0D0C0C; background-color: #F3F3F3;">
-    <div class="overflow-hidden fixed z-10 w-full flex items-center justify-between" style="background-color: #24279D;">
+    <div class="header fixed top-0 z-10 w-full flex items-center justify-between" style="background-color: #24279D;">
         <img class="logo ml-14 my-6 w-28 h-8" src="../images/Podreva-white-500px/Podreva-white-500px.png">
         <nav class="navbar lg:visible invisible lg:w-4/5 w-full flex flex-row items-center justify-between">
            <div class="lg:mx-0 mx-3">
            <ul class="list-none flex flex-row items-center justify-between">
-               <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Homepage1/pod.html">Home</a></li>
+               <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Homepage1/home.html">Home</a></li>
                <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Tool tip for serial/tool.html">Add Show</a></li>
                <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Show Home/show.html">My Shows</a></li>
            </ul>
@@ -20,21 +36,31 @@
            <div>
             <ul class="list-none flex flex-row items-center lg:justify-between justify-center">
                 <li class="inline-block"><a class="no-underline mr-5 lg:text-base text-sm text-white" href="../Help/help.html">Help</a></li>
-                <img class="lg:w-7 w-5 lg:h-7 h-5 mr-5" src="../images/20191012_155108/20191012_155108.png" alt="">
-                <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Mercy Johnson</a></li>
-                <img class="lg:mr-24 mr-3" src="../Episode/forward (2).svg">
+                
+                <div class="dropdown cursor-pointer mr-24">  
+                     <div class="py-6 inline-block relative flex items-center ">
+                        <img class="lg:w-7 w-5 lg:h-7 h-5 mr-5" src="../images/20191012_155108/20191012_155108.png" alt="">
+                        <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Mercy Johnson</a></li>
+                        <img class="lg:mr-24 mr-3" src="../Episode/forward (2).svg">
+                    </div>
+                    <div class="z-10 dropdown-content absolute hidden text-gray-700 py-5">
+                        <p class="font-semibold text-base p-2 hover:bg-gray-200">My Account</p>
+                        <a href="../LogIn/Log.html"><p class="text-base p-2 hover:bg-gray-200">Sign Out</p></a>
+                    </div>
+                </div>
             </ul>
             </div>
        </nav>
-       <div class="dropdown lg:hidden inline-block relative">
-            <button class="cursor-pointer focus:outline-none mr-24 mt-5"><img class="dropbtn w-10 h-10 border-4" src="https://o.remove.bg/downloads/f28caa7d-f545-4f02-9ab7-b958a44c560e/image-removebg-preview.png" alt=""></a>
-            <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
-                <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap no-underline lg:text-base text-sm" href="../Homepage1/pod.html">Home</a></li>
-                <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap no-underline lg:text-base text-sm" href="../Tool tip for serial/tool.html">Add Show</a></li>
-                <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap no-underline lg:text-base text-sm" href="../Show Home/show.html">My Shows</a></li>
-                <li class=""><a class="no-underline mr-5 lg:text-base text-sm text-white" href="../Help/help.html">Help</a></li>
-                <li class=""><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Mercy Johnson</a></li>
-            </ul>
+       
+       <div class="dropdown cursor-pointer lg:hidden inline-block relative mr-24">
+            <i class="text-white text-3xl my-6 fas fa-bars"></i>
+            <div class="z-10 dropdown-content absolute hidden text-gray-700 py-2">
+                <a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Homepage1/home.html">Home</a>
+                <a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Tool tip for serial/tool.html">Add Show</a>
+                <a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Show Home/show.html">My Shows</a>
+                <a class="no-underline hover:bg-gray-200 p-2 text-base" href="../Help/help.html">Help</a>
+                <a class="no-underline hover:bg-gray-200 p-2 text-base" href="#">Mercy Johnson</a>
+            </div>
         </div> 
     </div>
 
@@ -52,7 +78,7 @@
                         <p class="text-xs lg:mb-14 mb-0"  style="color:#24279D;">Integrations</p>
                     </div>
                     <a href=""><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/globe.svg"></a>
-                    <a href=""><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/Group 15.svg"></a>
+                    <a href="../Advance setting/adsetting.html"><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/Group 15.svg"></a>
             </div>
         </div>
 
