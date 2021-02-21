@@ -23,75 +23,78 @@
     </style>
 
 <body class="m-0 p-0" style="font-family:montserrat; color:#4A4649; background-color: #Ffffff;">
-    <div class="header fixed top-0 z-10 w-full flex items-center justify-between" style="background-color: #24279D;">
-        <img class="logo ml-14 my-6 w-28 h-8" src="../images/Podreva-white-500px/Podreva-white-500px.png">
-        <nav class="navbar lg:visible invisible lg:w-4/5 w-full flex flex-row items-center justify-between">
-           <div class="lg:mx-0 mx-3">
-           <ul class="list-none flex flex-row items-center justify-between">
-               <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Homepage1/home.html">Home</a></li>
-               <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Tool tip for serial/tool.html">Add Show</a></li>
-               <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Show Home/show.html">My Shows</a></li>
-           </ul>
+    <div class="header lg:px-24 px-5 fixed top-0 z-10 w-full flex items-center justify-between gap-20" style="background-color: #24279D;">
+        <img class="logo py-3" src="../images/Podreva-white-500px/Podreva-white-500px.png">
+        
+        <nav class="navbar lg:w-4/5 w-full lg:flex hidden flex-row items-center justify-between gap-20">
+           <div class="">
+                <ul class="list-none flex flex-row items-center justify-between gap-5">
+                    <li class="inline-block"><a class="no-underline px-7 py-3 lg:text-base text-sm text-white" href="../Homepage1/home.html">Home</a></li>
+                    <li class="inline-block"><a class="no-underline px-7 py-3 lg:text-base text-sm text-white" href="../Tool tip for serial/tool.html">Add Show</a></li>
+                    <li class="inline-block"><a class="no-underline px-7 py-3 lg:text-base text-sm text-white" href="../Show Home/show.html">My Shows</a></li>
+                </ul>
            </div>
            <div>
-            <ul class="list-none flex flex-row items-center lg:justify-between justify-center">
-                <li class="inline-block"><a class="no-underline mr-5 lg:text-base text-sm text-white" href="../Help/help.html">Help</a></li>
+                <ul class="list-none flex flex-row items-center lg:justify-between justify-center">
+                    <li class="inline-block"><a class="no-underline px-7 py-3 mr-5 lg:text-base text-sm text-white" href="../Help/help.html">Help</a></li>
                 
-                <div class="dropdown cursor-pointer mr-24">  
-                     <div class="py-6 inline-block relative flex items-center ">
-                        <img class="lg:w-7 w-5 lg:h-7 h-5 mr-5" src="../images/20191012_155108/20191012_155108.png" alt="">
-                        <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Mercy Johnson</a></li>
-                        <img class="lg:mr-24 mr-3" src="../Episode/forward (2).svg">
+                    <div class="dropdown cursor-pointer">  
+                        <div class="py-6 inline-block relative flex items-center gap-5">
+                            <img class="lg:w-7 w-5 lg:h-7 h-5" src="../images/20191012_155108/20191012_155108.png" alt="">
+                            <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white" href="#">Mercy Johnson</a></li>
+                            <img class="" src="../Episode/forward (2).svg">
+                        </div>
+                        <div class="z-10 dropdown-content absolute hidden text-gray-700 py-5">
+                            <p class="font-semibold text-base p-2 hover:bg-gray-200">My Account</p>
+                            <p class="text-base p-2 hover:bg-gray-200"><a href="../LogIn/Log.html">Sign Out</a></p>
+                        </div>
                     </div>
-                    <div class="z-10 dropdown-content absolute hidden text-gray-700 py-5">
-                        <p class="font-semibold text-base p-2 hover:bg-gray-200">My Account</p>
-                        <a href="../LogIn/Log.html"><p class="text-base p-2 hover:bg-gray-200">Sign Out</p></a>
-                    </div>
-                </div>
-            </ul>
+                </ul>
             </div>
        </nav>
        
-       <div class="dropdown cursor-pointer lg:hidden inline-block relative mr-24">
-            <i class="text-white text-3xl my-6 fas fa-bars"></i>
-            <div class="z-10 dropdown-content absolute hidden text-gray-700 py-2">
-                <a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Homepage1/home.html">Home</a>
-                <a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Tool tip for serial/tool.html">Add Show</a>
-                <a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Show Home/show.html">My Shows</a>
-                <a class="no-underline hover:bg-gray-200 p-2 text-base" href="../Help/help.html">Help</a>
-                <a class="no-underline hover:bg-gray-200 p-2 text-base" href="#">Mercy Johnson</a>
+       <div class="dropdown cursor-pointer lg:hidden inline-lock relative">
+            <i class="text-white text-3xl py-3 fas fa-bars"></i>
+            <div class="z-10 dropdown-content absolute top-14 right-0 hidden text-gray-700 py-2">
+                <p class="mb-3"><a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Homepage1/home.html">Home</a></p>
+                <p class="mb-3"><a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Tool tip for serial/tool.html">Add Show</a></p>
+                <p class="mb-3"><a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Show Home/show.html">My Shows</a></p>
+                <p class="mb-3"><a class="no-underline hover:bg-gray-200 p-2 text-base" href="../Help/help.html">Help</a></p>
+                <p class="mb-3"><a class="no-underline hover:bg-gray-200 p-2 text-base" href="#">Mercy Johnson</a></p>
             </div>
         </div> 
     </div>
 
-    <div class="lg:mx-24 mx-12 mb-24 mt-32">
+
+    
+    <div class="lg:mx-24 mx-0 mb-20 mt-24">
         <div class="flex items-center">
-            <div class="rounded-full border w-20 h-20"></div>
-            <p class="text-2xl font-bold pl-2">Manage Your Account</p>
+            <div class="rounded-full border lg:w-20 w-10 lg:h-20 h-10"></div>
+            <p class="lg:text-2xl font-bold pl-2">Manage Your Account</p>
         </div>
 
-        <div class="mt-10 pl-7 lg:pr-16 pr-5 pt-7 pb-16 bg-opacity-40 shadow" style="background-color: #f5f5ff;">
-            <p class="text-2xl font-bold">Your Profile</p>
+        <div class="mt-10 p-5 bg-opacity-40 shadow" style="background-color: #f5f5ff;">
+            <p class="lg:text-2xl font-bold">Your Profile</p>
 
-            <div class="mt-7 pr-12 w-full flex lg:flex-row flex-col" >
+            <div class="mt-7 lg:pr-12 w-full flex lg:flex-row flex-col" >
                 <form class="lg:w-1/2 w-full lg:mr-12" action="">
-                    <label for="name">YOUR NAME *</label><br>
-                    <input class="h-14 w-full rounded-xl border" type="text">
+                    <label class="lg:text-base" for="name">YOUR NAME *</label><br>
+                    <input class="lg:h-14 h-12 w-full rounded-xl border" type="text">
                 </form>
                 <form class="lg:w-1/2 w-full lg:mt-0 mt-10" action="">
                     <label for="name">YOUR EMAIL *</label><br>
-                    <input class="h-14 w-full rounded-xl border" type="email">
+                    <input class="lg:h-14 h-12 w-full rounded-xl border" type="email">
                 </form>
             </div>
 
-            <div class="mt-7 pr-12 w-full flex lg:flex-row flex-col lg:items-center items-start" >
-                <form class="lg:w-1/2 w-full lg:mr-20" action="">
+            <div class="mt-7 lg:pr-12 w-full flex lg:flex-row flex-col lg:items-center items-start gap-5" >
+                <form class="lg:w-1/2 w-full" action="">
                     <label for="name">TIME ZONE</label><br>
-                    <input class="h-14 w-full rounded-xl border" type="timezone">
+                    <input class="lg:h-14 h-12 w-full rounded-xl border" type="timezone">
                 </form>
-                <div class="lg:w-1/4 lg:mt-0 mt-10 flex flex-col mr-5">
-                    <p>UPLOAD NEW PROFILE IMAGE</p>
-                    <button class="flex items-center text-white lg:w-80 w-auto lg:px-12 px-5 py-5 lg:text-lg rounded-full shadow cursor-pointer focus:outline-none" style="background-color: #FF7D69;"><img class="pr-2" src="../Account setting/cloud-upload-alt.svg" alt="">Choose an image...</button>
+                <div class="lg:w-1/4 lg:mt-0 mt-10 flex flex-col">
+                    <p class="text-base">UPLOAD NEW PROFILE IMAGE</p>
+                    <button class="w-full flex items-center justify-between text-white lg:px-7 px-5 py-5 lg:text-base rounded-full shadow cursor-pointer focus:outline-none" style="background-color: #FF7D69;"><img class="" src="../Account setting/cloud-upload-alt.svg" alt="">Choose an image...</button>
                 </div>
                 <form class="flex lg:mt-0 mt-10 items-center" action="">
                     <input class="w-5 h-5 mr-2" type="radio" id="remove">
@@ -101,72 +104,78 @@
 
             <p class="mt-14 text-2xl font-bold">Change Your Password</p>
 
-            <div class="mt-2 pr-12 w-full flex lg:flex-row flex-col lg:items-center items-start">
+            <div class="mt-2 lg:pr-12 w-full flex lg:flex-row flex-col lg:items-center items-start">
                 <form class="lg:w-1/2 w-full lg:mr-12" action="">
-                    <input class="w-full h-14 pl-5 rounded-xl border" type="text" placeholder="Confirm current password">
+                    <input class="w-full lg:h-14 h-12 pl-5 rounded-xl border" type="text" placeholder="Confirm current password">
                 </form>
-                <form class="lg:w-1/2 w-auto lg:mt-0 mt-5" action="">
-                    <input class="w-full h-14 pl-5 rounded-xl border" type="email" placeholder="New password">
+                <form class="lg:w-1/2 w-full lg:mt-0 mt-2" action="">
+                    <input class="w-full lg:h-14 h-12 pl-5 rounded-xl border" type="email" placeholder="New password">
                 </form>
             </div>
 
-            <div class="mt-12 lg:w-1/3 w-auto ">
-                <button class="text-white lg:px-12 px-5 py-5 text-lg rounded-full shadow cursor-pointer focus:outline-none" style="background-color: #FF7D69;">Save changes</button>
+            <div class="mt-12">
+                <button class="text-white lg:px-12 px-5 py-3 lg:text-lg rounded-full shadow cursor-pointer focus:outline-none" style="background-color: #FF7D69;">Save changes</button>
             </div>
         </div>
 
-            <p class="mt-12 mb-5 text-2xl font-bold">Billing & Subscription</p>
 
-            <div class="mt-5 lg:pl-16 pl-7 lg:pr-32 pr-5 pt-12 pb-14 bg-opacity-40 shadow" style="background-color: #f5f5ff;">
+
+
+            <p class="mt-12 mb-5 lg:text-2xl font-bold">Billing & Subscription</p>
+
+            <div class="mt-5 lg:pl-16 pl-5 lg:pr-32 pr-3 pt-12 pb-14 bg-opacity-40 shadow" style="background-color: #f5f5ff;">
                 <div class="flex flex-col">
-                    <div class="flex items-center justify-between">
-                        <div class="lg:w-1/3 w-auto">
-                            <p class="font-semibold text-lg">Your Plan: <span>Starter Monthly</span></p>
+                    <div class="flex items-center justify-around gap-5">
+                        <div class="lg:w-1/3">
+                            <p class="font-semibold lg:text-lg">Your Plan: <span>Starter Monthly</span></p>
                         </div>
-                        <div class="lg:w-1/3 w-auto">
-                            <p class="py-2 px-4 border mr-12">Trial Ends on November 12, 2019</p>
+                        <div class="lg:w-1/3">
+                            <p class="py-2 px-4 lg:text-lg border">Trial Ends on November 12, 2019</p>
                         </div>
-                        <div class="lg:w-1/3 w-auto">
-                            <p class="font-semibold text-lg">Next Invoice: $19.00 on November 12, 2019</p>
+                        <div class="lg:w-1/3">
+                            <p class="font-semibold lg:text-lg">Next Invoice: $19.00 on November 12, 2019</p>
                         </div>
                     </div>
-                    <div class="mt-9 flex items-start justify-between">
-                        <div class="lg:w-1/3 w-auto">
-                            <button class="lg:px-12 px-5 py-5 border lg:text-lg text-sm rounded-full shadow cursor-pointer focus:outline-none" style="border-color: #FF7D69;">Billing History</button>
+
+                    <div class="mt-7 flex items-center justify-around gap-5">
+                        <div class="lg:w-1/3">
+                            <button class="lg:px-12 px-3 lg:py-5 py-2 border lg:text-lg text-sm rounded-full shadow cursor-pointer focus:outline-none" style="border-color: #FF7D69;">Billing History</button>
                         </div>
-                        <div class="lg:w-1/3 w-auto">
-                            <button onclick="myFunction()" class="lg:px-12 px-5 py-5 border lg:text-lg text-sm rounded-full shadow cursor-pointer focus:outline-none" style="border-color: #FF7D69;">Change Plan</button>
+                        <div class="lg:w-1/3">
+                            <button onclick="myFunction()" class="lg:px-12  px-3 lg:py-5 py-2 border lg:text-lg text-sm rounded-full shadow cursor-pointer focus:outline-none" style="border-color: #FF7D69;">Change Plan</button>
                         </div>
-                            <p><a class="no-underline text-lg" href="" style="color: #24279D;">Cancel Plan</a></p>
+                            <p><a class="no-underline lg:text-lg text-sm" href="" style="color: #24279D;">Cancel Plan</a></p>
                     </div>
                 </div>
             </div>
 
-            <p class="mt-12 mb-5 text-2xl font-bold">Payment Methods</p>
-            <div class="mt-5 lg:pl-16 pl-7 pr-32 pt-12 pb-14 bg-opacity-40 shadow" style="background-color: #f5f5ff;">
-                <p class="font-semibold text-lg">Your Plan: <span>Starter Monthly</span></p>
-                    <div class="flex items-center justify-between">
-                       <div class="mt-8 lg:w-1/3 w-auto mr-5 flex items-center justify-between">
+            <p class="mt-12 mb-5 lg:text-2xl font-bold">Payment Methods</p>
+            <div class="mt-5 lg:pl-16 pl-5 pt-12 pb-14 bg-opacity-40 shadow" style="background-color: #f5f5ff;">
+                <p class="font-semibold lg:text-lg">Your Plan: <span>Starter Monthly</span></p>
+                    
+                <div class="flex items-center justify-between gap-5">
+                       <div class="mt-8 lg:w-1/3 flex lg:flex-row flex-col items-center justify-start gap-2">
                            <img src="../Account setting/cc-mastercard.svg" alt="">
-                           <p class="lg:text-lg">…. …. …. 3334</p>
+                           <p class="lg:text-lg text-sm">…. …. …. 3334</p>
                        </div>   
-                       <div class="w-1/3 mr-5">
+                       <div class="w-1/3">
                             <p class="lg:text-lg ">Expires 9/2023</p>
                        </div>
-                        <div class="w-1/3 flex items-center">
-                            <p class="bg-black text-white text-base mr-2 px-5 py-2">Primary</p>
-                            <a href=""><p class="lg:text-lg">Remove Card</p></a> 
+                        <div class="w-1/3 flex lg:flex-row flex-col items-center justify-center gap-2">
+                            <p class="bg-black text-white lg:text-base text-sm px-5 py-2">Primary</p>
+                            <a href=""><p class="lg:text-lg text-sm">Remove Card</p></a> 
                         </div>
                     </div>
-                    <div class="lg:w-7/12 w-auto h-16 mt-11 border rounded-xl flex items-center">
+                    <div class="lg:w-7/12 lg:h-16 h-14 mt-11 border rounded-xl flex items-center">
                         <div class="w-10/12 flex items-center">
                             <img class="ml-5" src="../Account setting/credit-card.svg" alt="">
-                            <input class="h-14 w-full focus:outline-none text-lg border-none" type="cardnumber" style="background-color: #f5f5f5;">
+                            <input class="lg:h-14 h-12 w-full focus:outline-none lg:text-lg border-none" type="cardnumber" style="background-color: #f5f5f5;">
                         </div>
                         <div class="w-full">
-                            <input class="h-14 w-full focus:outline-none text-lg border-none" type="cardnumber" placeholder="MM/YY" style="background-color: #f5f5f5;">
+                            <input class="lg:h-14 h-12 w-full focus:outline-none lg:text-lg border-none" type="cardnumber" placeholder="MM/YY" style="background-color: #f5f5f5;">
                         </div>
                     </div>
+
                     <div class="w-auto">
                         <button class="mt-7 text-white lg:px-12 px-5 lg:py-5 py-3 lg:text-lg rounded-full shadow cursor-pointer focus:outline-none" style="background-color: #FF7D69;">Add new card</button>              
                     </div>

@@ -45,52 +45,75 @@
       display: inline-block;
     }
 
+    .sidebar img:hover{
+        border-bottom:5px solid #24279D;
+        padding: 5px;
+    }
     </style>
 
 <body class="m-0 p-0" style="font-family:montserrat; background-color: #ffffff; color:#4A4649">
-    <div class="header fixed top-0 z-10 w-full flex items-center justify-between" style="background-color: #24279D;">
-        <img class="logo ml-14 my-6 w-28 h-8" src="../images/Podreva-white-500px/Podreva-white-500px.png">
-        <nav class="navbar lg:visible invisible lg:w-4/5 w-full flex flex-row items-center justify-between">
-           <div class="lg:mx-0 mx-3">
-           <ul class="list-none flex flex-row items-center justify-between">
-               <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Homepage1/home.html">Home</a></li>
-               <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Tool tip for serial/tool.html">Add Show</a></li>
-               <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Show Home/show.html">My Shows</a></li>
-           </ul>
+    <div class="header lg:px-24 px-2 fixed top-0 z-10 w-full flex items-center justify-between lg:gap-20" style="background-color: #24279D;">
+        <img class="logo py-3" src="../images/Podreva-white-500px/Podreva-white-500px.png">
+        
+        <nav class="navbar lg:w-4/5 w-full lg:flex hidden flex-row items-center justify-between lg:gap-20">
+           <div class="">
+                <ul class="list-none flex flex-row items-center justify-between gap-5">
+                    <li class="inline-block"><a class="no-underline px-7 py-3 lg:text-base text-sm text-white" href="../Homepage1/home.html">Home</a></li>
+                    <li class="inline-block"><a class="no-underline px-7 py-3 lg:text-base text-sm text-white" href="../Tool tip for serial/tool.html">Add Show</a></li>
+                    <li class="inline-block"><a class="no-underline px-7 py-3 lg:text-base text-sm text-white" href="../Show Home/show.html">My Shows</a></li>
+                </ul>
            </div>
            <div>
-            <ul class="list-none flex flex-row items-center lg:justify-between justify-center">
-                <li class="inline-block"><a class="no-underline mr-5 lg:text-base text-sm text-white" href="../Help/help.html">Help</a></li>
+                <ul class="list-none flex flex-row items-center lg:justify-between justify-center">
+                    <li class="inline-block"><a class="no-underline px-7 py-3 mr-5 lg:text-base text-sm text-white" href="../Help/help.html">Help</a></li>
                 
-                <div class="dropdown cursor-pointer mr-24">  
-                     <div class="py-6 inline-block relative flex items-center ">
-                        <img class="lg:w-7 w-5 lg:h-7 h-5 mr-5" src="../images/20191012_155108/20191012_155108.png" alt="">
-                        <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Mercy Johnson</a></li>
-                        <img class="lg:mr-24 mr-3" src="../Episode/forward (2).svg">
+                    <div class="dropdown cursor-pointer">  
+                        <div class="py-6 inline-block relative flex items-center gap-5">
+                            <img class="lg:w-7 w-5 lg:h-7 h-5" src="../images/20191012_155108/20191012_155108.png" alt="">
+                            <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white" href="#">Mercy Johnson</a></li>
+                            <img class="" src="../Episode/forward (2).svg">
+                        </div>
+                        <div class="z-10 dropdown-content absolute hidden text-gray-700 py-5">
+                            <p class="font-semibold text-base p-2 hover:bg-gray-200">My Account</p>
+                            <p class="text-base p-2 hover:bg-gray-200"><a href="../LogIn/Log.html">Sign Out</a></p>
+                        </div>
                     </div>
-                    <div class="z-10 dropdown-content absolute hidden text-gray-700 py-5">
-                        <p class="font-semibold text-base p-2 hover:bg-gray-200">My Account</p>
-                        <a href="../LogIn/Log.html"><p class="text-base p-2 hover:bg-gray-200">Sign Out</p></a>
-                    </div>
-                </div>
-            </ul>
+                </ul>
             </div>
        </nav>
        
-       <div class="dropdown cursor-pointer lg:hidden inline-block relative mr-24">
-            <i class="text-white text-3xl my-6 fas fa-bars"></i>
-            <div class="z-10 dropdown-content absolute hidden text-gray-700 py-2">
-                <a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Homepage1/home.html">Home</a>
-                <a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Tool tip for serial/tool.html">Add Show</a>
-                <a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Show Home/show.html">My Shows</a>
-                <a class="no-underline hover:bg-gray-200 p-2 text-base" href="../Help/help.html">Help</a>
-                <a class="no-underline hover:bg-gray-200 p-2 text-base" href="#">Mercy Johnson</a>
+       <div class="dropdown cursor-pointer lg:hidden inline-block relative">
+            <i class="text-white lg:text-3xl py-3 fas fa-bars"></i>
+            <div class="z-50 dropdown-content absolute top-14 right-0 hidden text-gray-700 py-2">
+                <p class="mb-3"><a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Homepage1/home.html">Home</a></p>
+                <p class="mb-3"><a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Tool tip for serial/tool.html">Add Show</a></p>
+                <p class="mb-3"><a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Show Home/show.html">My Shows</a></p>
+                <p class="mb-3"><a class="no-underline hover:bg-gray-200 p-2 text-base" href="../Help/help.html">Help</a></p>
+                <p class="mb-3"><a class="no-underline hover:bg-gray-200 p-2 text-base" href="#">Mercy Johnson</a></p>
             </div>
         </div> 
     </div>
 
 
-        <div class="relative lg:left-32 left-0 lg:top-0 top-40 flex flex-col lg:w-10/12 w-full lg:mx-12">
+    <div class="h-full w-full lg:py-16 relative lg:top-7 top-5 flex lg:flex-row flex-col justify-between">
+        <div class="sidebar lg:px-0 px-5 lg:overflow-y-scroll lg:fixed lg:border-b-0 border-b lg:h-full h-auto lg:w-auto w-full bg-white">
+            <div class="lg:pb-40 pb-5 pt-5 mt-10 flex lg:flex-col flex-row items-center justify-between">
+                    <a href="../Over view/overview.html"><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/house.svg"></a>
+                    <a href="../Episode/episode.html"><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/stream.svg"></a>                        
+                    <a href="../Analytics/analytics.html"><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../social/chart-line (1).svg"></a>        
+                    <a href="../Team/team.html"><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../social/users (1).svg"></a>
+                    <a href="../social/social.html"><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/Group 11.svg"></a>
+                    <a href="../Integrations/integration.html"><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/windows.svg"></a>
+                    <a href=""><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/globe.svg"></a>
+                    <div class="flex flex-col items-center">
+                        <a href="../Advance setting/adsetting.html"><img class="lg:mb-5 mb-0 lg:w-7 w-auto" src="../images/Group 15.svg"></a>
+                        <p class="text-xs lg:mb-14 mb-0"  style="color:#24279D;">Show setting</p>
+                    </div>
+            </div>
+        </div>
+
+
+        <div class="relative lg:left-32 left-0 flex flex-col lg:w-10/12 w-full lg:mx-12 mx-2">
             <div class="mt-5 flex lg:flex-row flex-col justify-between" style="color: #0D0C0C;">
                 <div class="lgw-3/5 w-full mr-6">
                     <div class="shadow w-full bg-opacity-40" style="background-color: #F5F5F5;">
@@ -156,16 +179,17 @@
                 </div>
             </div>
 
-            <a class="mx-24" href="../Advance setting/adsetting.html">
-                <p class="text-xl font-medium flex items-center mt-11" style="color: #24279D;">
+            <p class="text-xl font-medium lg:mx-12 mx-5 mt-11" style="color: #24279D;">
+                <a class="flex items-center " href="../Advance Setting1/adset.html">
                     <img class="mr-6" src="../Advance setting/forward (1).svg" alt="">
                     Advanced settings
-                </p>
-            </a>
+                </a>
+             </p>
 
-            <div class="my-10 lg:pl-12 pl-7 pt-14 pb-24 text-lg shadow" style="background-color: #F5F5F5;">
+
+            <div class="my-10 lg:pl-12 pl-7 pt-14 pb-24 lg:text-lg text-sm shadow" style="background-color: #F5F5F5;">
                 <p class="mb-5 font-medium">EPISODE/SEASON NUMBERING</p>
-                <form class="mb-b">
+                <form class="mb-5">
                     <input class="w-4 h-4" type="checkbox">
                     <label class="tooltip" for="">Turn on the ability to set the season number on episode ?
                         <span class="tooltip-text text-base">Turn on if you wish to have more than one Season of episodes. Setting the Season on your episodes will affect how they're displayed and organized in Apple Podcasts and other players.</span>
@@ -230,7 +254,7 @@
                     </label><br><br>
                     <input class="w-4 h-4" type="checkbox">
                     <label class="tooltip" for="">Enable Podcorn analytics Integrations ?
-                        <span class="tooltip-text text-base">Podcorn is a third-party analytics platform. Enable this option if you want to use both Podreva and Podcorn analytics.</span>
+                        <span class="tooltip-text text-base lg:absolute">Podcorn is a third-party analytics platform. Enable this option if you want to use both Podreva and Podcorn analytics.</span>
                     </label><br>
                 </form>
 

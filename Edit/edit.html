@@ -20,55 +20,61 @@
     .dropdown:hover .dropdown-content {
       display: inline-block;
     }
+
+    .sidebar img:hover{
+        border-bottom:5px solid #24279D;
+        padding: 5px;
+    }
+
     </style>
 
 <body class="m-0 p-0" style="font-family:sans-serif, Montserrat; background-color: #F3F3F3;">
-    <div class="header fixed top-0 z-10 w-full flex items-center justify-between" style="background-color: #24279D;">
-        <img class="logo ml-14 my-6 w-28 h-8" src="../images/Podreva-white-500px/Podreva-white-500px.png">
-        <nav class="navbar lg:visible invisible lg:w-4/5 w-full flex flex-row items-center justify-between">
-           <div class="lg:mx-0 mx-3">
-           <ul class="list-none flex flex-row items-center justify-between">
-               <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Homepage1/home.html">Home</a></li>
-               <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Tool tip for serial/tool.html">Add Show</a></li>
-               <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Show Home/show.html">My Shows</a></li>
-           </ul>
+    <div class="header lg:px-24 px-2 fixed top-0 z-10 w-full flex items-center justify-between lg:gap-20" style="background-color: #24279D;">
+        <img class="logo py-3" src="../images/Podreva-white-500px/Podreva-white-500px.png">
+        
+        <nav class="navbar lg:w-4/5 w-full lg:flex hidden flex-row items-center justify-between lg:gap-20">
+           <div class="">
+                <ul class="list-none flex flex-row items-center justify-between gap-5">
+                    <li class="inline-block"><a class="no-underline px-7 py-3 lg:text-base text-sm text-white" href="../Homepage1/home.html">Home</a></li>
+                    <li class="inline-block"><a class="no-underline px-7 py-3 lg:text-base text-sm text-white" href="../Tool tip for serial/tool.html">Add Show</a></li>
+                    <li class="inline-block"><a class="no-underline px-7 py-3 lg:text-base text-sm text-white" href="../Show Home/show.html">My Shows</a></li>
+                </ul>
            </div>
            <div>
-            <ul class="list-none flex flex-row items-center lg:justify-between justify-center">
-                <li class="inline-block"><a class="no-underline mr-5 lg:text-base text-sm text-white" href="../Help/help.html">Help</a></li>
+                <ul class="list-none flex flex-row items-center lg:justify-between justify-center">
+                    <li class="inline-block"><a class="no-underline px-7 py-3 mr-5 lg:text-base text-sm text-white" href="../Help/help.html">Help</a></li>
                 
-                <div class="dropdown cursor-pointer mr-24">  
-                     <div class="py-6 inline-block relative flex items-center ">
-                        <img class="lg:w-7 w-5 lg:h-7 h-5 mr-5" src="../images/20191012_155108/20191012_155108.png" alt="">
-                        <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Mercy Johnson</a></li>
-                        <img class="lg:mr-24 mr-3" src="../Episode/forward (2).svg">
+                    <div class="dropdown cursor-pointer">  
+                        <div class="py-6 inline-block relative flex items-center gap-5">
+                            <img class="lg:w-7 w-5 lg:h-7 h-5" src="../images/20191012_155108/20191012_155108.png" alt="">
+                            <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white" href="#">Mercy Johnson</a></li>
+                            <img class="" src="../Episode/forward (2).svg">
+                        </div>
+                        <div class="z-10 dropdown-content absolute hidden text-gray-700 py-5">
+                            <p class="font-semibold text-base p-2 hover:bg-gray-200">My Account</p>
+                            <p class="text-base p-2 hover:bg-gray-200"><a href="../LogIn/Log.html">Sign Out</a></p>
+                        </div>
                     </div>
-                    <div class="z-10 dropdown-content absolute hidden text-gray-700 py-5">
-                        <p class="font-semibold text-base p-2 hover:bg-gray-200">My Account</p>
-                        <a href="../LogIn/Log.html"><p class="text-base p-2 hover:bg-gray-200">Sign Out</p></a>
-                    </div>
-                </div>
-            </ul>
+                </ul>
             </div>
        </nav>
        
-       <div class="dropdown cursor-pointer lg:hidden inline-block relative mr-24">
-            <i class="text-white text-3xl my-6 fas fa-bars"></i>
-            <div class="z-10 dropdown-content absolute hidden text-gray-700 py-2">
-                <a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Homepage1/home.html">Home</a>
-                <a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Tool tip for serial/tool.html">Add Show</a>
-                <a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Show Home/show.html">My Shows</a>
-                <a class="no-underline hover:bg-gray-200 p-2 text-base" href="../Help/help.html">Help</a>
-                <a class="no-underline hover:bg-gray-200 p-2 text-base" href="#">Mercy Johnson</a>
+       <div class="dropdown cursor-pointer lg:hidden inline-block relative">
+            <i class="text-white lg:text-3xl py-3 fas fa-bars"></i>
+            <div class="z-50 dropdown-content absolute top-14 right-0 hidden text-gray-700 py-2">
+                <p class="mb-3"><a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Homepage1/home.html">Home</a></p>
+                <p class="mb-3"><a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Tool tip for serial/tool.html">Add Show</a></p>
+                <p class="mb-3"><a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Show Home/show.html">My Shows</a></p>
+                <p class="mb-3"><a class="no-underline hover:bg-gray-200 p-2 text-base" href="../Help/help.html">Help</a></p>
+                <p class="mb-3"><a class="no-underline hover:bg-gray-200 p-2 text-base" href="#">Mercy Johnson</a></p>
             </div>
         </div> 
     </div>
 
 
-
-    <div class="h-full relative top-20 flex lg:flex-row flex-col justify-between">
-        <div class="sidebar fixed lg:border-0 border lg:h-full h-auto lg:w-auto w-full z-10 bg-white">
-            <div class="m-11 flex lg:flex-col flex-row items-center justify-between">
+    <div class="h-full w-full lg:py-16 relative lg:top-7 top-5 flex lg:flex-row flex-col justify-between">
+        <div class="sidebar px-5 lg:overflow-y-scroll lg:fixed lg:border-b-0 border-b lg:h-full h-auto lg:w-auto w-full bg-white">
+            <div class="lg:pb-40 pb-5 pt-5 mt-10 flex lg:flex-col flex-row items-center justify-between">
                 <a href="../Over view/overview.html"><img class="lg:mb-14 mb-0 lg:w-7 w-auto" src="../images/house.svg"></a>
                 <div class="flex flex-col items-center">
                    <a href="../Episode/episode.html"> <img class="lg:mb-5 mb-0 lg:w-7 w-auto" src="../images/stream.svg"></a>
@@ -83,7 +89,7 @@
             </div>
         </div>
 
-        <div class="relative lg:left-44 left-0 lg:top-0 top-40 flex flex-col lg:w-10/12 w-full lg:mx-12 mx-7">
+        <div class="relative lg:left-32 left-0 flex flex-col w-full lg:mx-12 mx-2">
             <div class="flex lg:flex-row flex-col items-center mt-10">
                 <img class="lg:w-40 w-36 lg:h-36 h-full mr-6" src="../images/img/img.png">
                 <p class="font-bold text-2xl" style="font-family: playfair display;">Curiosity</p>
@@ -98,7 +104,7 @@
                     </form>
                     <p class="text-sm mb-5">Forgot your password? <a class="no-underline"  style="color:#24279D;" href="#">Change Time Zone</a>
                     <p class="mb-2 text-base">CURRENT AUDIO FILE</p>
-                    <div class="flex items-center">
+                    <div class="flex lg:flex-row flex-col items-center">
                         <div class="flex items-center justify-center text-sm text-black px-14 py-3 mb-3 rounded-3xl w-80 h-20 flex items-center" style="background-color:#F3F3F3;">
                             <img class="mr-2" src="../images/forward.svg">
                             <p class="text-lg">00/00</p>
@@ -113,8 +119,8 @@
                     <label class="text-base mb-2" for="lname">EPISODE SUMMARY</label><br>
                     <input class="w-full text-sm h-14 mb-5 py-5 px-7 border-2 rounded-lg" type="text" id="text" name="text" placeholder="This Episode is about limit to curiosity"><br>
                 </form>
-                <form class="w-full mt-7 flex lg:flex-row flex-col items-center justify-between">
-                    <div class="w-1/2 mr-5">
+                <form class="w-full mt-7 flex flex-row items-center justify-between gap-2">
+                    <div class="w-1/2">
                     <label class="text-base mb-2" for="lname">AUTHOR</label><br>
                     <input class="w-full h-14 mb-3 mr-4 py-5 px-7 border-2 rounded-lg" type="text" id="text" name="text"><br>
                     </div>
@@ -126,12 +132,12 @@
 
                     <p class="text-base mt-5">FULL SHOW NOTES</p>
                     <div class="flex items-center mt-2">
-                        <div class=" flex w-28 h-10 border rounded-2xl mr-8">
+                        <div class=" flex lg:w-28 w-24 lg:h-10 h-7 border rounded-2xl mr-8">
                             <img class="p-2 border-r" src="../images/bold.svg">
                             <img class="p-2 border-r" src="../images/italic.svg">
                             <img class=" p-2" src="../images/link.svg">
                         </div>
-                        <div class="flex w-28 h-10 border rounded-2xl">
+                        <div class="flex lg:w-28 w-24 lg:h-10 h-7 border rounded-2xl">
                             <img class="p-2 border-r" src="../images/quote-left.svg">
                             <img class="p-2 border-r" src="../images/list-ul.svg">
                             <img class=" p-2" src="../images/list-ol.svg">
@@ -140,8 +146,8 @@
 
                     <textarea class="w-full h-40 mt-5 border-2 rounded-lg"></textarea>
 
-                    <div class="flex items-center justify-between my-5">
-                        <div class="w-1/5 text-sm">
+                    <div class="flex lg:flex-row flex-col lg:items-center items-start justify-between my-5">
+                        <div class="lg:w-1/5 text-sm">
                             <p class="text-sm">EPISODE TYPE</p>
                             <form class="my-5">
                                 <input type="radio" class="w-5 h-5" id="full" name="episode" value="full">
@@ -152,13 +158,13 @@
                                 <label class="text-base" for="bonus">Bonus</label>
                               </form>  
                         </div>
-                        <div class="w-1/4 text-sm">
+                        <div class="lg:w-1/4 text-sm">
                             <form>
                                 <label class="text-sm mb-1" for="lname">EPISODE TYPE</label><br>
                                 <input class="w-full h-9 mb-8 py-5 px-7 border-2 rounded-lg" type="number" id="number" name="number"><br>
                             </form>
                         </div>
-                        <div class="w-1/2">
+                        <div class="lg:w-1/2">
                             <p class="text-sm">Full episodes should have an episode number. Trailer and Bonus episodes can have an empty number, but can also have the same number as another episode that it's a trailer or bonus for.</p>
                         </div>
                     </div>
