@@ -44,58 +44,67 @@
     .dropdown:hover .dropdown-content {
       display: inline-block;
     }
+
+    .sidebar img:hover{
+        border-bottom:5px solid #24279D;
+        padding: 5px;
+    }
     </style>
 
 
 <body class="m-0 p-0" style="font-family:montserrat; background-color: #ffffff; color:#4A4649">
-    <div class="header fixed top-0 z-10 w-full flex items-center justify-between" style="background-color: #24279D;">
-        <img class="logo ml-14 my-6 w-28 h-8" src="../images/Podreva-white-500px/Podreva-white-500px.png">
-        <nav class="navbar lg:visible invisible lg:w-4/5 w-full flex flex-row items-center justify-between">
-           <div class="lg:mx-0 mx-3">
-           <ul class="list-none flex flex-row items-center justify-between">
-               <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Homepage1/home.html">Home</a></li>
-               <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Tool tip for serial/tool.html">Add Show</a></li>
-               <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="../Show Home/show.html">My Shows</a></li>
-           </ul>
+    <div class="header lg:px-24 px-2 fixed top-0 z-10 w-full flex items-center justify-between lg:gap-20" style="background-color: #24279D;">
+        <img class="logo py-3" src="../images/Podreva-white-500px/Podreva-white-500px.png">
+        
+        <nav class="navbar lg:w-4/5 w-full lg:flex hidden flex-row items-center justify-between lg:gap-20">
+           <div class="">
+                <ul class="list-none flex flex-row items-center justify-between gap-5">
+                    <li class="inline-block"><a class="no-underline px-7 py-3 lg:text-base text-sm text-white" href="../Homepage1/home.html">Home</a></li>
+                    <li class="inline-block"><a class="no-underline px-7 py-3 lg:text-base text-sm text-white" href="../Tool tip for serial/tool.html">Add Show</a></li>
+                    <li class="inline-block"><a class="no-underline px-7 py-3 lg:text-base text-sm text-white" href="../Show Home/show.html">My Shows</a></li>
+                </ul>
            </div>
            <div>
-            <ul class="list-none flex flex-row items-center lg:justify-between justify-center">
-                <li class="inline-block"><a class="no-underline mr-5 lg:text-base text-sm text-white" href="../Help/help.html">Help</a></li>
+                <ul class="list-none flex flex-row items-center lg:justify-between justify-center">
+                    <li class="inline-block"><a class="no-underline px-7 py-3 mr-5 lg:text-base text-sm text-white" href="../Help/help.html">Help</a></li>
                 
-                <div class="dropdown cursor-pointer mr-24">  
-                     <div class="py-6 inline-block relative flex items-center ">
-                        <img class="lg:w-7 w-5 lg:h-7 h-5 mr-5" src="../images/20191012_155108/20191012_155108.png" alt="">
-                        <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white mr-5" href="#">Mercy Johnson</a></li>
-                        <img class="lg:mr-24 mr-3" src="../Episode/forward (2).svg">
+                    <div class="dropdown cursor-pointer">  
+                        <div class="py-6 inline-block relative flex items-center gap-5">
+                            <img class="lg:w-7 w-5 lg:h-7 h-5" src="../images/20191012_155108/20191012_155108.png" alt="">
+                            <li class="inline-block"><a class="no-underline lg:text-base text-sm text-white" href="#">Mercy Johnson</a></li>
+                            <img class="" src="../Episode/forward (2).svg">
+                        </div>
+                        <div class="z-10 dropdown-content absolute hidden text-gray-700 py-5">
+                            <p class="font-semibold text-base p-2 hover:bg-gray-200">My Account</p>
+                            <p class="text-base p-2 hover:bg-gray-200"><a href="../LogIn/Log.html">Sign Out</a></p>
+                        </div>
                     </div>
-                    <div class="z-10 dropdown-content absolute hidden text-gray-700 py-5">
-                        <p class="font-semibold text-base p-2 hover:bg-gray-200">My Account</p>
-                        <a href="../LogIn/Log.html"><p class="text-base p-2 hover:bg-gray-200">Sign Out</p></a>
-                    </div>
-                </div>
-            </ul>
+                </ul>
             </div>
        </nav>
        
-       <div class="dropdown cursor-pointer lg:hidden inline-block relative mr-24">
-            <i class="text-white text-3xl my-6 fas fa-bars"></i>
-            <div class="z-10 dropdown-content absolute hidden text-gray-700 py-2">
-                <a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Homepage1/home.html">Home</a>
-                <a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Tool tip for serial/tool.html">Add Show</a>
-                <a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Show Home/show.html">My Shows</a>
-                <a class="no-underline hover:bg-gray-200 p-2 text-base" href="../Help/help.html">Help</a>
-                <a class="no-underline hover:bg-gray-200 p-2 text-base" href="#">Mercy Johnson</a>
+       <div class="dropdown cursor-pointer lg:hidden inline-block relative">
+            <i class="text-white lg:text-3xl py-3 fas fa-bars"></i>
+            <div class="z-50 dropdown-content absolute top-12 right-0 hidden text-gray-700 py-2">
+                <p class="mb-3"><a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Homepage1/home.html">Home</a></p>
+                <p class="mb-3"><a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Tool tip for serial/tool.html">Add Show</a></p>
+                <p class="mb-3"><a class="hover:bg-gray-200 p-2 no-underline text-base" href="../Show Home/show.html">My Shows</a></p>
+                <p class="mb-3"><a class="no-underline hover:bg-gray-200 p-2 text-base" href="../Help/help.html">Help</a></p>
+                <p class="mb-3"><a class="no-underline hover:bg-gray-200 p-2 text-base" href="#">Mercy Johnson</a></p>
             </div>
         </div> 
     </div>
 
-    <div class="mt-32 mb-7 lg:mx-24 mx-12">
-        <P class="text-2xl font-bold mb-2">Add a New Show</P>
-        <p class="text-lg font-medium">Add your podcast's basic information now and come back later to finish it up.</p>
+
+
+
+    <div class="mt-32 mb-7 lg:mx-24 mx-3">
+        <P class="lg:text-2xl font-bold mb-2">Add a New Show</P>
+        <p class="lg:text-lg font-medium">Add your podcast's basic information now and come back later to finish it up.</p>
     </div>         
 
-    <div class="lg:mx-24 mx-12 mt-5 flex lg:flex-row flex-col justify-between" style="color: #0D0C0C;">
-        <div class="lgw-3/5 w-full mr-6">
+    <div class="lg:mx-24 mx-3 mt-5 flex lg:flex-row flex-col justify-between" style="color: #0D0C0C;">
+        <div class="lgw-3/5 w-full lg:mr-6">
             <div class="shadow w-full bg-opacity-40" style="background-color: #F5F5F5;">
                 <form class="mr-14 ml-7">
                     <input class="h-14 w-full mt-12 text-base py-5 px-8 border-2 rounded-lg placeholder-opacity-40" style="color: #9A9A9A; border-color: #9A9A9A;" type="title" id="title" name="title" placeholder="The title of your show"><br>
@@ -129,7 +138,7 @@
     </div>
 </div>
 
-<div class="mt-7 lg:mx-24 mx-12 flex lg:flex-row flex-col justify-between">
+<div class="mt-7 lg:mx-24 mx-3 flex lg:flex-row flex-col justify-between">
         <div class="lg:w-1/2 w-full bg-opacity-40 shadow lg:mr-12 mr-0" style="background-color: #f5f5f5;">
             <form action="" class="mt-5 mb-12 mx-7" style="font-family: montserrat;">
                 <label class="px-2 mb-2 text-base" for="prycat">PRIMARY CATEGORY</label><br>
@@ -160,8 +169,8 @@
         </div>
     </div>
 
-    <div class="mx-24 flex items-center lg:justify-between justify-center">
-        <button class="lg:text-lg text-sm text-white mb-24 mt-12 px-11 py-5 rounded-full cursor-pointer focus:outline-none shadow" style="background-color:#FF7D69;">Create my show</button>
+    <div class="lg:mx-24 mx-3 flex items-center lg:justify-between justify-center">
+        <button class="lg:text-lg text-sm text-white mb-24 mt-12 lg:px-11 px-7 lg:py-5 py-3 rounded-full cursor-pointer focus:outline-none shadow" style="background-color:#FF7D69;">Create my show</button>
     </div>
 </body>
 </html>
