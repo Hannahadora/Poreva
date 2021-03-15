@@ -115,7 +115,7 @@
                     <div class="flex flex-col lg:items-start items-center border lg:w-1/2 w-10/12 pt-5 pb-10 lg:pl-8 mb-24 lg:mr-20 mr-10 lg:ml-0 ml-10">
                         <img class="mb-10" src="../Integrations/Page-1.svg" alt="">
                         <p class="text-base mb-5">Need a ConvertKit Account?</p>
-                        <p><a href="" class="font-semibold text-lg" style="color: #24279D;">Connect to ConverKit</a></p>
+                        <p><a href="" class="KIT_open font-semibold text-lg" style="color: #24279D;">Connect to ConverKit</a></p>
                     </div>
                 </div>
 
@@ -138,7 +138,66 @@
 
 
 
+        <!----------------------------------------CONVERTKIT POPUP-------------->
 
+    <div id="KIT" class="bg-white rounded md:w-1/2 w-11/12 pb-10 pt-5 mx-auto shadow">
+        <p class="font-medium text-lg px-7 py-2">
+            Connect Podreva to ConvertKit</p>
+        <p class="py-1 px-7 text-sm">
+            We'll need your ConvertKit API Key to connect it to Podreva. You can find the key in your ConvertKit Account Settings page. Copy and Paste it here to continue.
+        </p>
+
+        <form class="h-12 border rounded flex items-center justify-between mx-7 my-2" action="">
+            <div class="flex items-center">
+                <img src="../Integrations/key.svg" alt="">
+                <input type="text" placeholder="ConvertKit API Key" class="text-base ml-2 focus:outline-none">
+            </div>
+            <input type="submit" value="SAVE" class="px-4 h-12 text-white rounded" style="background-color: #24279D;">
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+  <!-- Include jQuery Popup Overlay -->
+  <script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js">
+  </script>
+
+
+  
+
+        <script>
+            $(document).ready(function() {
+
+            // Initialize the plugin
+            $('#KIT').popup();
+            });
+
+        </script>
 
 
 </body>
